@@ -15,35 +15,45 @@ class EnquiryMailController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
+            'business' => 'nullable',
             'pickupaddress' => 'required',
-            'dropoffaddress' => 'required',
+            'pickup_postcode' => 'nullable',
+            'destinationaddress' => 'required',
+            'destination_postcode' => 'nullable',
             'pickupdate' => 'required',
-            'dropoffdate' => 'required',
+            'destinationdate' => 'required',
             'pickuptime' => 'required',
-            'dropofftime' => 'required',
+            'destinationtime' => 'required',
             'noofpassenger' => 'required',
+            'luggage' => 'required',
+            'journey_type' => 'required',
             'g-recaptcha-response' => 'required|captcha'
         ]);
 
         $data = [
             'name' => $request->name,
             'email' => $request->email,
-            'phone' => $request -> phone,
-            'pickupaddress' => $request -> pickupaddress,
-            'dropoffaddress' => $request -> dropoffaddress,
-            'pickupdate' => $request -> pickupdate,
-            'dropoffdate' => $request -> dropoffdate,
-            'pickuptime' => $request -> pickuptime,
-            'dropofftime' => $request -> dropofftime,
-            'noofpassenger' => $request -> noofpassenger,
-            'subject' => 'Massage From Enquiry Form'
+            'phone' => $request->phone,
+            'business' => $request->business,
+            'pickupaddress' => $request->pickupaddress,
+            'pickup_postcode' => $request->pickup_postcode,
+            'destinationaddress' => $request->destinationaddress,
+            'destination_postcode' => $request->destination_postcode,
+            'pickupdate' => $request->pickupdate,
+            'destinationdate' => $request->destinationdate,
+            'pickuptime' => $request->pickuptime,
+            'destinationtime' => $request->destinationtime,
+            'noofpassenger' => $request->noofpassenger,
+            'luggage' => $request->luggage,
+            'journey_type' => $request->journey_type,
+            'subject' => 'Message From Enquiry Form'
         ];
 
         // $messages = [
         //     'g-recaptcha-response.required' => 'You must check the reCAPTCHA.',
         //     'g-recaptcha-response.captcha' => 'Captcha error! try again later or contact site admin.',
         // ];
- 
+
         Mail::to('booking@amtcoaches.co.uk')->send(new EnquiryMail($data));
 
         return redirect('/')->with('success', 'Message sent successfully!');

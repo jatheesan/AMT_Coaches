@@ -31,6 +31,8 @@ return [
 
     'env' => env('APP_ENV', 'production'),
 
+    'vat_number' => env('APP_VAT_NUMBER', '489168237'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode

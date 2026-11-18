@@ -3,11 +3,11 @@
 <!-- Header Start -->
 <div class="container-fluid bg-breadcrumb">
     <div class="container text-center py-5 about-container">
-        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Terms and Conditions</h4>
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">{{ __('Terms & Conditions') }}</h4>
         <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-            <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-            <li class="breadcrumb-item active text-primary">Terms & Conditions</li>
+            <li class="breadcrumb-item"><a href="{{ url('/') }}">{{ __('Home') }}</a></li>
+            <li class="breadcrumb-item"><a href="#">{{ __('Pages') }}</a></li>
+            <li class="breadcrumb-item active text-primary">{{ __('Terms & Conditions') }}</li>
         </ol>
     </div>
 </div>
@@ -92,205 +92,204 @@
 <div class="container-fluid feature py-5">
     <div class="container py-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp about-feature" data-wow-delay="0.1s">
-            <h2 class="display-5 text-capitalize mb-3">Terms & Conditions</h2>
+            <h2 class="display-5 text-capitalize mb-3">{{ __('Terms & Conditions') }}</h2>
             <p class="mb-0">
-                These Terms and Conditions apply to all bookings made with AMT Coaches, whether confirmed verbally, in writing, or through electronic communication.
+                {{ __('Terms & Conditions Intro') }}
             </p>
         </div>
     </div>
     <div class="container">
         <div class="pb-4 text-justify">
-            <h3><span class="tx-secondary">Quotations</span> - Coach Hire Pricing Made Clear</h3>
+            <h3><span class="tx-secondary">{{ __('Quotations') }}</span> - {{ __('Coach Hire Pricing Made Clear') }}</h3>
             <p>
-                All coach hire quotes are based on the most direct route and the details you provide at the time of enquiry. If you’ve got a preferred route in mind, just let us know — we’ll include it in the quote. Otherwise, the route will be left to our driver’s discretion to ensure a smooth and timely journey.
+                {{ __('Quotations Para 1') }}
             </p>
             <p>
-                All coach hire quotations are subject to vehicle availability when you decide to go ahead. Our quotes are valid for 28 days, unless we say otherwise, so don’t hang about!
+                {{ __('Quotations Para 2') }}
             </p>
             <p>
-                To lock in your booking, you’ll need to send an agreed deposit to our office along with the full details of your trip. Once that’s in, we’ll email or post you a booking confirmation with everything clearly laid out. Be sure to check it over and let us know straight away if anything looks off or needs tweaking.
+                {{ __('Quotations Para 3') }}
             </p>
             <p>
-                Unless we’ve stated it upfront, all quotes include the coach and driver hire only. Things like entry tickets, tolls, or parking fees aren’t included and would be your responsibility.
-            </p>
-        </div>
-        <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Price Guarantee</span> - No Hidden Surprises</h3>
-            <p>
-                Once you’ve booked, the price we quote for your coach hire service is locked in – as long as you stick to the agreed payment schedule and don’t make major changes to the trip details. That means no hidden extras or last-minute surprises from our side.
-            </p>
-            <p>
-                However, if your journey involves third-party suppliers (like ferry bookings or accommodation), especially outside the UK, their prices may vary due to exchange rates or external levies. If we know third-party services will be part of your booking, we’ll flag this clearly in your booking confirmation, so you’re always in the loop.
+                {{ __('Quotations Para 4') }}
             </p>
         </div>
         <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Payment of Balance</span> - Settle Up Before You Set Off</h3>
+            <h3><span class="tx-secondary">{{ __('Price Guarantee') }}</span> - {{ __('No Hidden Surprises') }}</h3>
             <p>
-                To keep your coach hire running smoothly, the remaining balance must be paid no later than 14 days before your departure date. If you're booking within 14 days of travel, the full amount is due at the time of booking.
+                {{ __('Price Guarantee Para 1') }}
             </p>
             <p>
-                We accept bank transfers, cheques, cash, credit/debit cards, and banker’s drafts. If you’re paying by cheque, make sure it reaches us at least 14 working days before travel to allow time for it to clear.
-            </p>
-            <p>
-                If payment isn’t made on time, we reserve the right to charge interest at 2.5% per annum above the current Santander Bank base rate, calculated from the due date until payment is received in full.
+                {{ __('Price Guarantee Para 2') }}
             </p>
         </div>
         <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Cancellation Policy</span> - Coach Hire Bookings</h3>
+            <h3><span class="tx-secondary">{{ __('Payment of Balance') }}</span> - {{ __('Settle Up Before You Set Off') }}</h3>
             <p>
-                If you need to cancel your coach hire booking, please give us a ring as soon as possible to let us know. After that, you’ll need to confirm your cancellation in writing – either by email or post – so we have it on record.
+                {{ __('Payment Balance Para 1') }}
             </p>
             <p>
-                Cancellation fees may apply depending on how close to the travel date you cancel. These charges help cover admin costs and the allocation of our vehicles and drivers. Full details of our cancellation terms and refund policy will be provided in your booking confirmation.
+                {{ __('Payment Balance Para 2') }}
+            </p>
+            <p>
+                {{ __('Payment Balance Para 3') }}
             </p>
         </div>
         <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Coach Hire Cancellation Policy</span></h3>
+            <h3><span class="tx-secondary">{{ __('Cancellation Policy') }}</span> - {{ __('Coach Hire Bookings') }}</h3>
             <p>
-                We understand that plans can change. If you need to cancel your coach hire booking, the following charges apply based on how much notice we receive in writing:
+                {{ __('Cancellation Policy Para 1') }}
+            </p>
+            <p>
+                {{ __('Cancellation Policy Para 2') }}
+            </p>
+        </div>
+        <div class="pb-4 tx-justify">
+            <h3><span class="tx-secondary">{{ __('Coach Hire Cancellation Policy') }}</span></h3>
+            <p>
+                {{ __('Cancellation Notice') }}
             </p>
             <ul>
-                <li>More than 14 days before departure - Deposit only is retained</li>
-                <li>Between 14 days and 48 hours before departure - 50% of the total hire cost is charged</li>
-                <li>Less than 48 hours before departure - 100% of the total hire cost is charged</li>
+                <li>{{ __('Cancellation More Than 14 Days') }}</li>
+                <li>{{ __('Cancellation 14 Days to 48 Hours') }}</li>
+                <li>{{ __('Cancellation Less Than 48 Hours') }}</li>
             </ul>
             <p>
-                All cancellations must be submitted in writing. These terms ensure fairness and allow us to manage our scheduling effectively.
+                {{ __('Cancellation Policy Final Note') }}
             </p>
         </div>
         <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Route & Time Variations</span> - Staying on Track</h3>
+            <h3><span class="tx-secondary">{{ __('Route & Time Variations') }}</span> - {{ __(' Staying on Track') }}</h3>
             <p>
-                We reserve the right to apply additional charges if your journey runs over the agreed mileage or hire time. Any extras will be fair and based on the actual costs we incur – no surprises.
+                {{ __('Route & Time Para 1') }}
             </p>
             <p>
-                Your coach will depart at the times agreed in advance, so it’s your responsibility to ensure all passengers are ready and accounted for. We can’t be held liable for anyone left behind due to late arrivals or miscommunication within your group.
+                {{ __('Route & Time Para 2') }}
             </p>
             <p>
-                The hire hours agreed at the time of booking must be followed, except in the case of a genuine emergency or diversion. Please note that we strictly follow UK laws on driver working hours and rest breaks – and under no circumstances can these be exceeded, no matter the circumstances.
-            </p>
-        </div>
-        <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Use of Vehicle</span> - During Your Hire</h3>
-            <p>Unless we've confirmed it in writing beforehand, please don't assume the coach will stay on-site between your outbound and return trips. Our vehicles aren’t guaranteed to remain with your group during stopovers or be available for extra use while parked at your destination. All coach usage beyond the agreed itinerary must be arranged in advance.</p>
-        </div>
-        <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Seating Capacity</span> - Know Your Coach Limits</h3>
-            <p>
-                When we confirm your coach hire booking, we’ll also confirm the seating capacity of the vehicle assigned. For everyone’s safety and comfort, the number of passengers must not exceed the maximum capacity stated for that coach. Overloading isn’t allowed under any circumstances, and it could lead to delays or refusal of service.
+                {{ __('Route & Time Para 3') }}
             </p>
         </div>
         <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Vehicle Provision</span> - Luxury & Executive Coach Hire</h3>
+            <h3><span class="tx-secondary">{{ __('Use of Vehicle') }}</span> - {{ __('During Your Hire') }}</h3>
+            <p>{{ __('Use of Vehicle Para') }}</p>
+        </div>
+        <div class="pb-4 tx-justify">
+            <h3><span class="tx-secondary">{{ __('Seating Capacity') }}</span> - {{ __('Know Your Coach Limits') }}</h3>
+            <p>
+                {{ __('Seating Capacity Para') }}
+            </p>
+        </div>
+        <div class="pb-4 tx-justify">
+            <h3><span class="tx-secondary">{{ __('Vehicle Provision') }}</span> - {{ __('Luxury & Executive Coach Hire') }}</h3>
             <p>      
-                We always aim to provide the exact luxury or executive coach specified in your booking. However, there may be occasions where the requested vehicle is temporarily unavailable due to unforeseen circumstances.
+                {{ __('Vehicle Provision Para 1') }}
             </p>
             <p>
-                In such cases, we’ll supply the highest quality vehicle available at the time — this may include a coach from one of our trusted partner operators. Rest assured, it will meet our usual high standards to ensure a comfortable and reliable journey.
+                {{ __('Vehicle Provision Para 2') }}
             </p>
+            {{-- <p>
+                {{ __('Vehicle Provision Para 3') }}
+            </p> --}}
+        </div>
+        <div class="pb-4 tx-justify">
+            <h3><span class="tx-secondary">{{ __('Breakdowns & Delays') }}</span></h3>
             <p>
-                We also reserve the right to upgrade your hire to a larger vehicle at no extra cost. However, if your group uses additional seats beyond your original booking, a pro rata charge may apply for the extra capacity.
+                {{ __('Breakdowns & Delays Para') }}
             </p>
         </div>
         <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Breakdowns & Delays</span></h3>
+            <h3><span class="tx-secondary">{{ __('Changes to Itinerary') }}</span></h3>
             <p>
-                While we aim to keep your journey smooth and punctual, traffic and the unexpected can sometimes get in the way. We provide travel time estimates in good faith, but AMT Coaches cannot guarantee arrival or completion of a trip at a set time. We’re not liable for any delays, missed connections, or losses caused by vehicle breakdowns, roadworks, traffic congestion, or other situations beyond our control.
+                {{ __('Changes to Itinerary Para') }}
             </p>
         </div>
         <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Changes to Itinerary</span></h3>
+            <h3><span class="tx-secondary">{{ __('Belongings Header') }}</span></h3>
             <p>
-                Occasionally, we may need to tweak your planned itinerary — due to operational reasons or unavoidable circumstances. Where possible, AMT Coaches will inform you in advance of any changes to routes, schedules, or pick-up/drop-off points, and we’ll do our best to minimise any disruption to your travel plans.
+                {{ __('Belongings Para 1') }}
+            </p>
+            <p>
+                {{ __('Belongings Para 2') }}
             </p>
         </div>
         <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Passengers’ Belongings & Lost Property Policy</span></h3>
-            <p>
-                For safety reasons, all our coaches follow legal limits on how much luggage can be carried. Our drivers have the final say on what luggage can be taken onboard and how it’s stored. As a general rule, we allow one medium suitcase and one piece of hand luggage per passenger.
-            </p>
-            <p>
-                Please note, AMT Coaches cannot accept responsibility for any personal items lost or damaged during travel or items left behind in the vehicle. If you leave something behind, don’t worry — all lost property found on our coaches is kept safely at our depot for up to three months, after which it will be securely disposed of if unclaimed.
-            </p>
-        </div>
-        <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Passenger Conduct</span> – Keeping It Safe & Respectful Onboard</h3>
-            <p>To make sure every journey runs smoothly and comfortably, all passengers are expected to follow a few simple rules while travelling with AMT Coaches:</p>
+            <h3><span class="tx-secondary">{{ __('Passenger Conduct') }}</span> – {{ __('Keeping It Safe & Respectful Onboard') }}</h3>
+            <p>{{ __('Passenger Conduct Para') }}</p>
             <ul>
                 <li>
-                    <b>Respectful Behaviour:</b> For everyone’s peace and quiet, personal music players, radios, or musical instruments can’t be used onboard unless we’ve given the go-ahead. If permission is granted, it’ll be clearly stated in your booking confirmation.
+                    {!! __('Conduct Rule 1') !!}
                 </li>
                 <li>
-                    <b>Drugs & Alcohol Policy:</b> Strictly no illegal drugs are allowed on board, whether for carrying or consumption. Prescription or over-the-counter medication is fine, but you may be asked to show proof, especially when travelling internationally.
+                    {!! __('Conduct Rule 2') !!}
                 </li>
                 <li>
-                    <b>Driver Authority:</b> Our driver is in charge of the vehicle and has the authority to remove any passenger whose behaviour is abusive, unruly, or breaks the law. As the hirer, you’re responsible for your group’s behaviour and any damage caused during your coach hire.
+                    {!! __('Conduct Rule 3') !!}
                 </li>
                 <li>
-                    <b>Safety While Moving:</b> For your own safety, never try to board or exit the coach while it’s moving. We’re not liable for any injury or loss resulting from unsafe behaviour.
+                    {!! __('Conduct Rule 4') !!}
                 </li>
                 <li>
-                    <b>Alcohol & Food:</b> No alcohol is allowed onboard without written permission. It is against UK law to carry or drink alcohol on coaches travelling to or from designated sporting events. Eating and drinking (except small snacks like sweets or chocolate) is not permitted unless the vehicle is set up for it, or you’ve had it cleared with us or the driver in advance.
+                    {!! __('Conduct Rule 5') !!}
                 </li>
                 <li>
-                    <b>Animals:</b> Only registered assistance dogs (guide dogs or hearing dogs) are allowed on board, and only if you let us know in advance. No other animals are permitted.
+                    {!! __('Conduct Rule 6') !!}
                 </li>
                 <li>
-                    <b>Posters & Promotions:</b> No posters, leaflets or advertisements can be displayed on any of our coaches without prior written consent from AMT Coaches.
+                    {!! __('Conduct Rule 7') !!}
                 </li>
             </ul>
         </div>
         <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Currency & Travel Documents</span></h3>
+            <h3><span class="tx-secondary">{{ __('Currency & Travel Documents') }}</span></h3>
             <p>
-                When travelling abroad with AMT Coaches, it's your responsibility to carry the correct currency, a valid passport, and any required visas for the countries you’re visiting. Make sure everything’s in order before departure to avoid any travel disruptions.
+                {{ __('Currency Para') }}
             </p>
         </div>
         <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Duty-Free & Luggage Regulations</span></h3>
+            <h3><span class="tx-secondary">{{ __('Duty-Free & Luggage Regulations') }}</span></h3>
             <p>
-                You are solely responsible for complying with current duty-free and duty-paid laws. We accept no liability for any delays, fines, or confiscations caused by failure to follow customs rules. You can check the latest guidelines at any UK port or airport.
+                {{ __('Duty-Free Para 1') }}
             </p>
             <p>
-                <b>Please note:</b> our driver will assess how much luggage and duty-free goods can legally be carried on board. Their decision is final to keep things safe and within legal limits.
-            </p>
-        </div>
-        <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Travel Insurance</span></h3>
-            <p>
-                While coach travel insurance isn't mandatory, we strongly recommend it - especially for trips outside the UK. It's your responsibility to make sure you're adequately insured and have all the necessary travel documents in place for your journey.
+                {!! __('Duty-Free Para 2') !!}
             </p>
         </div>
         <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Our Responsibilities to You</span></h3>
+            <h3><span class="tx-secondary">{{ __('Travel Insurance') }}</span></h3>
             <p>
-                We promise to deliver the coach hire service exactly as outlined in your booking confirmation. AMT Coaches is fully insured and accepts responsibility for the actions of our staff. We hold comprehensive public liability and passenger insurance to cover any personal injury or third-party incident that may occur during your journey.
+                {{ __('Insurance Para') }}
+            </p>
+        </div>
+        <div class="pb-4 tx-justify">
+            <h3><span class="tx-secondary">{{ __('Our Responsibilities to You') }}</span></h3>
+            <p>
+                {{ __('Responsibilities Para') }}
             </p>
             <p></p>
         </div>
         <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Complaints Procedure</span> - We're Here to Help</h3>
+            <h3><span class="tx-secondary">{{ __('Complaints Procedure') }}</span> - {{ __('We\'re Here to Help') }}</h3>
             <p>
-                At AMT Coaches, we pride ourselves on delivering top-quality coach hire services — but if something’s not quite right, we want to know. Most issues can be sorted quickly and easily at the time. If you experience a problem during your journey, please inform the driver or an AMT representative as soon as possible. We’ll do our best to put things right there and then.
+                {{ __('Complaints Para 1') }}
             </p>
             <p>
-                If your issue isn’t resolved to your satisfaction, please send your complaint in writing within 14 days of your hire date to:
+                {{ __('Complaints Para 2') }}
                 <pre>
-                    AMT Coaches
-                    The Reeves,
-                    Snakey Ln, Feltham 
-                    TW13 7NB,
+                    AMT Coaches Ltd
+                    London Gateway Services,
+                    M1, London, 
+                    NW7 3HU,
                     UK
                 </pre>
             </p>
             <p>
-                We’ll acknowledge your complaint within 14 days and aim to provide a full response within 28 days.
-            </p>
+                {{ __('Complaints Para 3') }}
         </div>
         <div class="pb-4 tx-justify">
-            <h3><span class="tx-secondary">Contract Terms</span> - Your Agreement with AMT Coaches</h3>
+            <h3><span class="tx-secondary">{{ __('Contract Terms') }}</span> - {{ __('Your Agreement with AMT Coaches') }}</h3>
             <p>
-                When you book with us, your contract is formed based on these Terms & Conditions and the written confirmation we send once we’ve received your deposit. This agreement is legally binding and governed by the laws of England and Wales, with any disputes handled exclusively by the Courts in that jurisdiction.
+                {{ __('Contract Terms Para') }}
             </p>
         </div>
         <div class="pb-4 tx-justify">
@@ -439,14 +438,14 @@
 <div class="container-fluid banner pb-5 wow zoomInDown" data-wow-delay="0.1s">
     <div class="container pb-5">
         <div class="banner-item rounded">
-            <img src="{{ asset('img/coach3.jpg') }}" class="img-fluid rounded w-100" alt="AMT Coaches | Coach Hire Services London">
+            <img src="{{ asset('img/amt-coach1.png') }}" class="img-fluid rounded w-100" alt="AMT Coaches | Coach Hire Services London">
             <div class="banner-content">
-                <h2 class="text-primary">Hire Coach</h2>
-                <h1 class="text-white">Interested in Renting?</h1>
-                <p class="text-white">Don't hesitate and send us a message.</p>
+                <h2 class="text-primary">{{ __('Hire Coach') }}</h2>
+                <h1 class="text-white">{{ __('') }}</h1>
+                <p class="text-white">{{ __('Don\'t hesitate and send us a message.') }}</p>
                 <div class="banner-btn">
-                    <a href="https://wa.me/+447564447775" class="btn btn-secondary rounded-pill py-3 px-4 px-md-5 me-2">WhatsApp</a>
-                    <a href="{{ url('/contact') }}" class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2">Contact Us</a>
+                    <a href="https://wa.me/+447564447775" class="btn btn-secondary rounded-pill py-3 px-4 px-md-5 me-2">{{ __('WhatsApp') }}</a>
+                    <a href="{{ url('/contact') }}" class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2">{{ __('Contact Us') }}</a>
                 </div>
             </div>
         </div>

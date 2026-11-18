@@ -1,4 +1,3 @@
-
 @component('mail::message')
 # New Enquiry Message
 
@@ -6,30 +5,48 @@ You have received a new message from your website's enquiry form.
 
 ---
 
-**Name:** {{ $data['name'] }}  
+**Name:** {{ $data['name'] }}
 
-**Email:** {{ $data['email'] }}  
+**Business / Organization:** {{ $data['business'] ?? 'Not provided' }}
 
-**Phone:** {{ $data['phone'] ?? 'Not provided' }}  
+**Email:** {{ $data['email'] }}
 
-**PickUp Address:** {{ $data['pickupaddress'] }} 
+**Phone:** {{ $data['phone'] ?? 'Not provided' }}
 
-**PickUp Date:** {{ $data['pickupdate'] }} 
-
-**PickUp Time:** {{ $data['pickuptime'] }}
-
-**Dropoff Address:** {{ $data['dropoffaddress'] }} 
-
-**Dropoff Date:** {{ $data['dropoffdate'] }} 
-
-**Dropoff Time:** {{ $data['dropofftime'] }}
-
-**No Of Passenger:** {{ $data['noofpassenger'] }} 
+**No Of Passengers:** {{ $data['noofpassenger'] }}
 
 ---
 
+### Pickup Details
+
+**Pickup Address:** {{ $data['pickupaddress'] }}
+
+**Pickup Postcode:** {{ $data['pickup_postcode'] ?? 'Not provided' }}
+
+**Pickup Date:** {{ $data['pickupdate'] }}
+
+**Pickup Time:** {{ $data['pickuptime'] }}
+
 ---
 
-Thanks,  
+### Destination Details
+
+**Destination Address:** {{ $data['destinationaddress'] }}
+
+**Destination Postcode:** {{ $data['destination_postcode'] ?? 'Not provided' }}
+
+**Destination Date:** {{ $data['destinationdate'] }}
+
+**Destination Time:** {{ $data['destinationtime'] }}
+
+---
+
+**Luggage:** {{ $data['luggage'] }}
+
+**Journey Type:** {{ $data['journey_type'] }}
+
+---
+
+Thanks,
 {{ $data['name'] }}
 @endcomponent

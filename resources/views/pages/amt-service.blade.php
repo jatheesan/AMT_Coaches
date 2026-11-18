@@ -1,4 +1,6 @@
 @extends('layouts.template')
+@section('title', __('Coach Hire Services in London | AMT Coaches'))
+@section('meta_description', __('Explore AMT Coaches services: Airport transfers, private hire, corporate events, school trips, and rail replacement across London. Book affordable minibus and coach hire.'))
 @section('content')
 <!-- Header Start -->
 <div class="container-fluid bg-breadcrumb">
@@ -92,8 +94,8 @@
 <div class="container-fluid feature py-5">
     <div class="container py-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp about-feature" data-wow-delay="0.1s">
-            <h2 class="display-5 text-capitalize mb-3">AMTCoaches <span class="text-primary">Services</span></h2>
-            <p class="mb-0">The Smart Choice for Affordable Coach Hire in London
+            <h2 class="display-5 text-capitalize mb-3">{{ __('AMTCoaches')}} <span class="text-primary">{{ __('Services')}}</span></h2>
+            <p class="mb-0">{{ __('The Smart Choice for Affordable') }} <a href="{{ url('/') }}" title="Coach hire in London" class="text-body text-decoration-underline">{{ __('Coach hire in London') }}</a>
             </p>
         </div>
         <div class="row">
@@ -102,9 +104,10 @@
                     <div class="feature-icon">
                         <span class="fa fa-plane fa-2x"></span>
                     </div>
-                    <div class="ms-4">
-                        <h5 class="mb-3">Airport Hire</h5>
-                        <p class="mb-0">Start or end your journey stress-free with our professional airport transfer coach hire. Whether it's Heathrow, Gatwick, Luton, or Stansted, our punctual and spacious coaches ensure timely pickups, ample luggage space, and a smooth ride for groups of all sizes. Ideal for corporate travel, tours, or family holidays.</p>
+                    <div class="ms-4 hover-box">
+                        <h5 class="mb-3">{{ __('Airport Hire') }}</h5>
+                        <p class="mb-0">{{ __('Airport Hire Para') }}</p>
+                        <img class="hover-image" src="{{ asset('img/AMT-Coach-AirportHire2.png') }}" alt="Airport Hire Image">
                     </div>
                 </div>
             </div>
@@ -117,10 +120,10 @@
                             <div class="feature-icon">
                                 <span class="fa fa-trophy fa-2x"></span>
                             </div>
-                            <div class="ms-4">
-                                <h5 class="mb-3">Private Hire</h5>
-                                <p class="mb-0">Our coaches are ideal for private group travel, with soft reclining seats, climate control,
-                                    and a smooth ride, ensuring a proper first-class experience across cities.</p>
+                            <div class="ms-4 hover-box">
+                                <h5 class="mb-3">{{ __('Private Hire') }}</h5>
+                                <p class="mb-0">{{ __('Private Hire Para') }}</p>
+                                <img class="hover-image" src="{{ asset('img/AMT-Coach-PrivateHire.png') }}" alt="Private Hire Image">
                             </div>
                         </div>
                     </div>
@@ -129,28 +132,26 @@
                             <div class="feature-icon">
                                 <span class="fa fa-road fa-2x"></span>
                             </div>
-                            <div class="ms-4">
-                                <h5 class="mb-3">Corporate Hire</h5>
-                                <p class="mb-0">With our luxury mini-coach hire, you can impress clients and reward your team while
-                                    also ensuring comfort, punctuality, and professionalism. Discover the benefits of hiring
-                                    a corporate coach.</p>
+                            <div class="ms-4 hover-box">
+                                <h5 class="mb-3">{{ __('Corporate Hire')}}</h5>
+                                <p class="mb-0">{{ __('Corporate Hire Para') }}</p>
+                                <img class="hover-image" src="{{ asset('img/AMT-Coach-CoporateHire.png') }}" alt="Corporate Hire Image">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                <img src="{{ asset('img/bus-2.png') }}" class="img-fluid w-100 about-bus-img"  alt="AMT Coaches | Coach Hire Services London">
+                <img src="{{ asset('img/amt-coach6.png') }}" class="img-fluid w-100 about-bus-img" alt="AMT Coaches | Coach Hire Services London">
             </div>
             <div class="col-xl-4">
                 <div class="row gy-4 gx-0">
                     <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="feature-item justify-content-end">
-                            <div class="text-end me-4">
-                                <h5 class="mb-3">Tour Operators</h5>
-                                <p class="mb-0"> Deliver outstanding sightseeing experiences with our executive coaches and professional
-                                    drivers, ensuring that your clients enjoy London’s best destinations in comfort, safety,
-                                    and style.</p>
+                            <div class="text-end me-4 hover-box">
+                                <h5 class="mb-3">{{ __('Tour Operators') }}</h5>
+                                <p class="mb-0"> {{ __('Tour Operators Para') }}</p>
+                                <img class="hover-image" src="{{ asset('img/AMT-Coach-tour.png') }}" alt="Tour Operators Image">
                             </div>
                             <div class="feature-icon">
                                 <span class="fa fa-tag fa-2x"></span>
@@ -159,10 +160,10 @@
                     </div>
                     <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="feature-item justify-content-end">
-                            <div class="text-end me-4">
-                                <h5 class="mb-3">Schools & Colleges</h5>
-                                <p class="mb-0">Our minibus and coach hire services are deliberately designed for educational travel,
-                                    ensuring that your children have a safe and comfortable ride every time.</p>
+                            <div class="text-end me-4 hover-box">
+                                <h5 class="mb-3">{{ __('Schools & Colleges') }}</h5>
+                                <p class="mb-0">{{ __('Schools & Colleges Hire Para') }}</p>
+                                <img class="hover-image" src="{{ asset('img/AMT-Coach-SchoolHire.png') }}" alt="Schools & Colleges Hire Image">
                             </div>
                             <div class="feature-icon">
                                 <span class="fa fa-map-pin fa-2x"></span>
@@ -178,9 +179,10 @@
                     <div class="feature-icon">
                         <span class="fa fa-train fa-2x"></span>
                     </div>
-                    <div class="ms-4">
-                        <h5 class="mb-3">Rail Replacement</h5>
-                        <p class="mb-0">Ensure seamless travel during rail disruptions with our dependable rail replacement coach hire. Our fleet offers comfortable seating, punctual schedules, and experienced drivers to keep passengers moving safely and efficiently. Perfect for planned maintenance or emergency service interruptions.</p>
+                    <div class="ms-4 hover-box">
+                        <h5 class="mb-3">{{ __('Rail Replacement') }}</h5>
+                        <p class="mb-0">{{ __('Rail Replacement Para') }}</p>
+                        <img class="hover-image" src="{{ asset('img/AMT-Coach-RailReplacement.png') }}" alt="Rail Replacement Image">
                     </div>
                 </div>
             </div>
@@ -327,14 +329,14 @@
 <div class="container-fluid banner pb-5 wow zoomInDown" data-wow-delay="0.1s">
     <div class="container pb-5">
         <div class="banner-item rounded">
-            <img src="{{ asset('img/coach3.jpg') }}" class="img-fluid rounded w-100" alt="AMT Coaches | Coach Hire Services London">
+            <img src="{{ asset('img/amt-coach1.png') }}" class="img-fluid rounded w-100" alt="AMT Coaches | Coach Hire Services London">
             <div class="banner-content">
-                <h2 class="text-primary">Hire Coach</h2>
-                <h1 class="text-white">Interested in Renting?</h1>
-                <p class="text-white">Don't hesitate and send us a message.</p>
+                <h3 class="text-primary">{{ __('Hire Coach') }}</h3>
+                <h2 class="text-white h1">{{ __('Affordable Coach Hire in London') }}</h2>
+                <p class="text-white">{{ __('Don\'t hesitate and send us a message.') }}</p>
                 <div class="banner-btn">
-                    <a href="https://wa.me/+447564447775" class="btn btn-secondary rounded-pill py-3 px-4 px-md-5 me-2">WhatsApp</a>
-                    <a href="{{ url('/contact') }}" class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2">Contact Us</a>
+                    <a href="https://wa.me/+447564447775" class="btn btn-secondary rounded-pill py-3 px-4 px-md-5 me-2">{{ __('WhatsApp') }}</a>
+                    <a href="{{ url('/contact') }}" class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2">{{ __('Contact Us') }}</a>
                 </div>
             </div>
         </div>
