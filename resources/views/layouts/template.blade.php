@@ -143,8 +143,8 @@
                                 </select>
                             </div>
                             <a href="https://www.facebook.com/profile.php?id=61577832150237" class="btn btn-light btn-sm-square rounded-circle me-3"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.tiktok.com/@user5741077271614" class="btn btn-light btn-sm-square rounded-circle me-3"><i class="fab fa-tiktok"></i></a>
-                            <a href="https://www.tiktok.com/@user5741077271614" class="btn btn-light btn-sm-square rounded-circle me-3"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@amtcoaches" class="btn btn-light btn-sm-square rounded-circle me-3"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.instagram.com/amtcoaches" class="btn btn-light btn-sm-square rounded-circle me-3"><i class="fab fa-instagram"></i></a>
                             <a href="https://wa.me/+447564447775" class="btn btn-light btn-sm-square rounded-circle me-3"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
@@ -248,6 +248,7 @@
                                 </h4> -->
                                 <a href="{{ url('/') }}" title="Coach hire in London"><img class="img-width" src="{{ asset('img/amt-coach-logo.png') }}" alt="AMT Coaches Logo - Luxury Coach Hire London" ></a>
                                 <p class="mb-3">{{ __('Welcome to AMT Coaches, your trusted provider for') }} <a href="{{ url('/') }}" class="text-white text-decoration-underline" title="coach hire in London">{{ __('coach hire in London') }}</a>. {{ __('We offer luxury travel for all occasions.') }}</p>
+                                <img src="{{ asset('img/DBS.webp') }}" alt="DBS Checked - AMT Coaches drivers are DBS checked" title="DBS Checked" loading="lazy" style="width: auto; max-height: 100px;">
                             </div>
                         </div>
                     </div>
@@ -291,8 +292,8 @@
                             <a href="tel:+447564447775"><i class="fas fa-phone me-2"></i> +447564447775</a>
                             <div class="d-flex">
                                 <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="https://www.facebook.com/profile.php?id=61577832150237"><i class="fab fa-facebook-f text-white"></i></a>
-                                <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="https://www.tiktok.com/@user5741077271614"><i class="fab fa-tiktok text-white"></i></a>
-                                <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="https://www.tiktok.com/@user5741077271614"><i class="fab fa-instagram text-white"></i></a>
+                                <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="https://www.tiktok.com/@amtcoaches"><i class="fab fa-tiktok text-white"></i></a>
+                                <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="https://www.instagram.com/amtcoaches"><i class="fab fa-instagram text-white"></i></a>
                                 <a class="btn btn-secondary btn-md-square rounded-circle me-3" href="https://wa.me/+447564447775"><i class="fab fa-whatsapp text-white"></i></a>
                             </div>
                         </div>
