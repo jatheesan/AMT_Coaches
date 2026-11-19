@@ -27,7 +27,11 @@ Route::get('/fix-cache', function () {
 
 // Permanent (301) redirects from un-prefixed URLs to the English pages,
 // so search engines index one canonical /en/... URL per page.
-Route::permanentRedirect('/', '/en');
+// The English homepage is served directly at "/" (no redirect = faster first load for visitors and
+// PageSpeed). Its canonical tag points to /en, so search engines still treat /en as the main address.
+Route::get('/', function () {
+    return view('pages.amt-home');
+})->middleware('setLocale');
 
 foreach ([
     'about',

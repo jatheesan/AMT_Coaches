@@ -45,8 +45,14 @@
     });
 
 
+    // Owl carousels and counters are only used by sections that are currently commented out in the views,
+    // so their libraries are no longer loaded. These guards keep main.js safe if those sections return
+    // (add the owl.carousel / waypoints / counterup scripts back to the layout at the same time).
+    var hasOwl = typeof $.fn.owlCarousel === 'function';
+    var hasCounter = typeof $.fn.counterUp === 'function';
+
     // Car Categories
-    $(".categories-carousel").owlCarousel({
+    if (hasOwl) $(".categories-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
         dots: false,
@@ -79,7 +85,7 @@
 
 
     // testimonial carousel
-    $(".testimonial-carousel").owlCarousel({
+    if (hasOwl) $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1500,
         center: false,
@@ -113,7 +119,7 @@
 
 
     // Facts counter
-    $('[data-toggle="counter-up"]').counterUp({
+    if (hasCounter) $('[data-toggle="counter-up"]').counterUp({
         delay: 5,
         time: 2000
     });

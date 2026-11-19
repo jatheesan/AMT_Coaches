@@ -5,12 +5,8 @@
 
     RewriteEngine On
 
-    # SEO: send the homepage straight to the canonical English home in ONE redirect
-    # (instead of non-www -> www -> / -> /en). Only applies on the live domain.
-    RewriteCond %{HTTP_HOST} ^(www\.)?amtcoaches\.co\.uk$ [NC]
-    RewriteRule ^$ https://www.amtcoaches.co.uk/en [L,R=301]
-
-    # SEO: any other page on the bare domain goes straight to the www version
+    # SEO: the bare domain goes straight to the www version in ONE redirect.
+    # (The homepage itself is served at "/" with no redirect; its canonical tag points to /en.)
     RewriteCond %{HTTP_HOST} ^amtcoaches\.co\.uk$ [NC]
     RewriteRule ^(.*)$ https://www.amtcoaches.co.uk/$1 [L,R=301]
 

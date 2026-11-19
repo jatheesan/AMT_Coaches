@@ -1122,3 +1122,7 @@
    so search engines and SEO tools can read all the text */
 .reveal { transform: translateY(28px); transition: transform .9s cubic-bezier(.2, .7, .2, 1); }
 .reveal.reveal-in { transform: none; }
+
+/* Logos carry width/height attributes (prevents layout shift); keep them sized by the rules above */
+.navbar-light .navbar-brand img { width: auto; }
+.img-width { height: auto; }

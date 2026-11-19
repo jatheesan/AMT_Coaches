@@ -30,30 +30,32 @@
             }
             $cleanPath = implode('/', $segments);
         @endphp
-        <link rel="canonical" href="{{ url()->current() }}" />
+        {{-- The homepage is also served at "/" (no redirect, faster first load); its canonical address stays /en --}}
+        <link rel="canonical" href="{{ request()->path() === '/' ? url('/en') : url()->current() }}" />
         <link rel="alternate" hreflang="en" href="{{ url('/en/' . $cleanPath) }}" />
         <link rel="alternate" hreflang="ko" href="{{ url('/ko/' . $cleanPath) }}" />
         <link rel="alternate" hreflang="x-default" href="{{ url('/en/' . $cleanPath) }}" />
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        {{-- Only the weights the site uses (the full italic + variable set was a large render-blocking download) --}}
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@400..900&display=swap" rel="stylesheet">
-
-        {{-- Icons and animation styles are not needed for the first paint: load them without blocking rendering --}}
+        {{-- Nothing below blocks the first paint except Bootstrap's layout CSS:
+             - web fonts, icons and animation styles load in the background (text shows straight away in a fallback font)
+             - Font Awesome is self-hosted with font-display: swap
+             - the template's own CSS is small, so it is inlined --}}
         @foreach ([
-            'https://use.fontawesome.com/releases/v5.15.4/css/all.css',
+            'https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@400..900&display=swap',
+            asset('lib/fontawesome/css/all.min.css'),
             'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css',
             asset('lib/animate/animate.min.css'),
-            asset('lib/owlcarousel/assets/owl.carousel.min.css'),
         ] as $deferredCss)
             <link rel="stylesheet" href="{{ $deferredCss }}" media="print" onload="this.media='all'">
             <noscript><link rel="stylesheet" href="{{ $deferredCss }}"></noscript>
         @endforeach
+        <link rel="preload" href="{{ asset('lib/fontawesome/webfonts/fa-solid-900.woff2') }}" as="font" type="font/woff2" crossorigin>
 
-        <!-- Template Stylesheet (version query busts the browser cache when the file changes) -->
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/style.css') }}?v={{ filemtime(public_path('css/style.css')) }}" rel="stylesheet">
+        {{-- Template stylesheet inlined (image paths rewritten to absolute URLs) --}}
+        <style>{!! str_replace('url(../img/', 'url(' . asset('img') . '/', file_get_contents(public_path('css/style.css'))) !!}</style>
 
         <!-- LocalBusiness Schema Markup -->
         <script type="application/ld+json">
@@ -155,7 +157,7 @@
                     <a href="{{ url(app()->getLocale()) }}" class="navbar-brand p-0">
                         <!-- <h1 class="display-6 text-primary"><i class="fas fa-bus me-3"></i>AMT<span class="nav-coach">Coaches<Span></h1> -->
                         <!-- <i class="fa-solid fa-bus me-3"></i> -->
-                        <img src="{{ asset('img/amt-coach-logo.webp') }}" alt="AMT Coaches - Coach Hire London">
+                        <img src="{{ asset('img/amt-coach-logo.webp') }}" width="240" height="240" alt="AMT Coaches - Coach Hire London">
                     </a>
                     <div class="d-flex">
                         <div class="language-switch">
@@ -245,7 +247,7 @@
                                 <!-- <h4 class="text-primary mb-4">
                                     <i class="fas fa-bus me-2"></i>AMT<span class="nav-coach">Coaches<Span></Span>
                                 </h4> -->
-                                <a href="{{ url(app()->getLocale()) }}" title="Coach hire in London"><img class="img-width" src="{{ asset('img/amt-coach-logo.webp') }}" alt="AMT Coaches Logo - Luxury Coach Hire London" ></a>
+                                <a href="{{ url(app()->getLocale()) }}" title="Coach hire in London"><img class="img-width" src="{{ asset('img/amt-coach-logo.webp') }}" width="240" height="240" alt="AMT Coaches Logo - Luxury Coach Hire London" ></a>
                                 <p class="mb-3">{{ __('Welcome to AMT Coaches, your trusted provider for') }} <a href="{{ url(app()->getLocale()) }}" class="text-white text-decoration-underline" title="coach hire in London">{{ __('coach hire in London') }}</a>. {{ __('We offer luxury travel for all occasions.') }}</p>
                                 <img width="360" height="110" src="{{ asset('img/DBS.webp') }}" alt="DBS Checked - AMT Coaches drivers are DBS checked" title="DBS Checked" loading="lazy" style="width: auto; max-height: 100px;">
                             </div>
@@ -321,9 +323,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
-    <script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{ asset('lib/counterup/counterup.min.js') }}"></script>
-    <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
     
 
     <!-- Template Javascript -->
