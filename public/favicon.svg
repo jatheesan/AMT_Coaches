@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- AMT Coaches favicon: white coach, front view, on the brand navy -->
+  <rect width="64" height="64" rx="14" fill="#1F2E4E"/>
+  <!-- mirrors -->
+  <path d="M12 17 Q7 17 7 24 V28" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M52 17 Q57 17 57 24 V28" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <!-- wheels -->
+  <rect x="15" y="48" width="9" height="9" rx="2.5" fill="#0d1526"/>
+  <rect x="40" y="48" width="9" height="9" rx="2.5" fill="#0d1526"/>
+  <!-- body -->
+  <rect x="11" y="9" width="42" height="42" rx="7" fill="#ffffff"/>
+  <!-- destination sign -->
+  <rect x="17" y="12.5" width="30" height="4.5" rx="2" fill="#DF1C37"/>
+  <!-- windscreen -->
+  <rect x="15" y="19.5" width="34" height="16" rx="3" fill="#1F2E4E"/>
+  <!-- headlights -->
+  <rect x="15" y="40" width="9" height="5" rx="2.5" fill="#DF1C37"/>
+  <rect x="40" y="40" width="9" height="5" rx="2.5" fill="#DF1C37"/>
+  <!-- grille -->
+  <rect x="27" y="41.5" width="10" height="2" rx="1" fill="#c3c9d0"/>
+</svg>

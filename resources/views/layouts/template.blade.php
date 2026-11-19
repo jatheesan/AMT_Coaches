@@ -5,6 +5,15 @@
         <meta charset="utf-8">
         <title>@yield('title', 'AMT Coaches | Luxury Coach Hire in London & Minibus Rentals')</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <!-- Favicons: bus front view for browser tabs (clear at 16px), full logo for home-screen icons -->
+        <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="48x48">
+        <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+        <link rel="manifest" href="{{ asset('site.webmanifest') }}">
+        <meta name="theme-color" content="#1F2E4E">
         <meta name="keywords" content="@yield('meta_keywords', 'coach hire London, minibus hire London, coach hire with driver, luxury coach hire London, airport coach transfers London, Heathrow coach hire, school trip coach hire, corporate coach hire London, private coach hire, wedding coach hire, rail replacement coaches, 16 seater minibus hire, AMT Coaches')">
         <meta name="description" content="@yield('meta_description', 'AMT Coaches offers luxury coach hire in London and minibus rentals. Reliable, comfortable vehicles, professional drivers, and competitive prices.')">
 
