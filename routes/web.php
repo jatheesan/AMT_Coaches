@@ -6,6 +6,7 @@ use App\Http\Controllers\EnquiryMailController;
 use App\Http\Controllers\PsvPcvInspectionController;
 use App\Http\Controllers\AdminPanel\AdminController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\ProfileController;
 /* |-------------------------------------------------------------------------- | Web Routes |-------------------------------------------------------------------------- | | Here is where you can register web routes for your application. These | routes are loaded by the RouteServiceProvider and all of them will | be assigned to the "web" middleware group. Make something great! | */
 
 // Route::get('/', function () {
@@ -24,61 +25,36 @@ Route::get('/fix-cache', function () {
     return 'Cleared';
 });
 
-// Default redirect (optional)
-Route::get('/', function () {
-    $locale = session('locale', 'en');
-    return redirect("/{$locale}");
-});
+// Permanent (301) redirects from un-prefixed URLs to the English pages,
+// so search engines index one canonical /en/... URL per page.
+Route::permanentRedirect('/', '/en');
 
-Route::get('/about', function () {
-    $locale = session('locale', 'en');
-    return redirect("/{$locale}/about");
-});
+foreach ([
+    'about',
+    'contact',
+    'fleet',
+    'services',
+    'terms-conditions',
+    'enquiry',
+    'airport-transfers-london',
+    'corporate-coach-hire-london',
+    'school-trips-coach-hire-london',
+    'minibus-hire-london',
+    'private-coach-hire-london',
+    'rail-replacement-coach-hire',
+] as $page) {
+    Route::permanentRedirect("/{$page}", "/en/{$page}");
+}
 
-Route::get('/contact', function () {
-    $locale = session('locale', 'en');
-    return redirect("/{$locale}/contact");
-});
-
-Route::get('/fleet', function () {
-    $locale = session('locale', 'en');
-    return redirect("/{$locale}/fleet");
-});
-
-Route::get('/services', function () {
-    $locale = session('locale', 'en');
-    return redirect("/{$locale}/services");
-});
-
-Route::get('/terms-conditions', function () {
-    $locale = session('locale', 'en');
-    return redirect("/{$locale}/terms-conditions");
-});
-
-Route::get('/enquiry', function () {
-    $locale = session('locale', 'en');
-    return redirect("/{$locale}/enquiry");
-});
-
-Route::get('/airport-transfers-london', function () {
-    $locale = session('locale', 'en');
-    return redirect("/{$locale}/airport-transfers-london");
-});
-
-Route::get('/corporate-coach-hire-london', function () {
-    $locale = session('locale', 'en');
-    return redirect("/{$locale}/corporate-coach-hire-london");
-});
-
-Route::get('/school-trips-coach-hire-london', function () {
-    $locale = session('locale', 'en');
-    return redirect("/{$locale}/school-trips-coach-hire-london");
-});
+// French and Tamil are not offered on the site; send any old links to English.
+Route::get('/{oldLocale}/{path?}', function ($oldLocale, $path = '') {
+    return redirect('/en' . ($path !== '' ? "/{$path}" : ''), 301);
+})->where(['oldLocale' => 'fr|ta', 'path' => '.*']);
 
 Route::group([
     'prefix' => '{locale}',
     'middleware' => 'setLocale',
-    'where' => ['locale' => 'en|fr|ta|ko']
+    'where' => ['locale' => 'en|ko']
 ], function () {
 
     Route::get(
@@ -150,24 +126,17 @@ Route::group([
             return view('pages.amt-school-trips-coach-hire-london');
         }
     );
+
+    Route::view('/minibus-hire-london', 'pages.amt-minibus-hire-london');
+    Route::view('/private-coach-hire-london', 'pages.amt-private-coach-hire-london');
+    Route::view('/rail-replacement-coach-hire', 'pages.amt-rail-replacement-coach-hire');
 });
-
-Route::get('/layouts', function () {
-    return view('layouts.template');
-});
-
-
-
 
 Route::post('/contact-email', [ContactUsController::class, 'sendEmail'])->name('contact.email');
 Route::post('/enquiry-email', [EnquiryMailController::class, 'sendEmail'])->name('enquiry.email');
 
 // Route::post('/inspection-email', [PsvPcvInspectionController::class, 'sendEmail'])->name('inspection.email');
 
-
-Route::get('/welcome', function () {
-    return view('welcome');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

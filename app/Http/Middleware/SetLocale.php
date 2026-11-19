@@ -13,14 +13,10 @@ class SetLocale
     {
         $locale = $request->route('locale');
 
-        if (!in_array($locale, ['en', 'fr', 'ta','ko'])) {
+        if (!in_array($locale, ['en', 'ko'])) {
             $locale = 'en';
         }
 
-         if ($request->has('lang')) {
-            $locale = $request->get('lang');
-            Session::put('locale', $locale);
-        }
         App::setLocale($locale);
 
         session(['locale' => $locale]); // store selected language

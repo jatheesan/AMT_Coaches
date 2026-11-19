@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
     <head>
         <meta charset="utf-8">
         <title>@yield('title', 'AMT Coaches | Luxury Coach Hire in London & Minibus Rentals')</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta name="keywords" content="@yield('meta_keywords', 'luxury coach hire, coach hire London, minibus hire, luxury coach rental, airport coach transfer, group travel services, school trip transport, executive coach hire, UK coach hire, rail replacement bus, corporate coach services, 53-seater coach, 36-seater minibus, AMT Coaches, private coach hire UK, luxury minibus hire with driver')">
+        <meta name="keywords" content="@yield('meta_keywords', 'coach hire London, minibus hire London, coach hire with driver, luxury coach hire London, airport coach transfers London, Heathrow coach hire, school trip coach hire, corporate coach hire London, private coach hire, wedding coach hire, rail replacement coaches, 16 seater minibus hire, AMT Coaches')">
         <meta name="description" content="@yield('meta_description', 'AMT Coaches offers luxury coach hire in London and minibus rentals. Reliable, comfortable vehicles, professional drivers, and competitive prices.')">
 
         <!-- Open Graph / Facebook -->
@@ -13,14 +13,14 @@
         <meta property="og:url" content="{{ url()->current() }}">
         <meta property="og:title" content="@yield('title', 'AMT Coaches | Luxury Coach Hire in London & Minibus Rentals')">
         <meta property="og:description" content="@yield('meta_description', 'AMT Coaches offers luxury coach hire in London and minibus rentals. Reliable, comfortable vehicles, professional drivers, and competitive prices.')">
-        <meta property="og:image" content="{{ asset('img/amt-coach-logo.png') }}">
+        <meta property="og:image" content="{{ asset('img/amt-coach1.webp') }}">
 
         <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="{{ url()->current() }}">
-        <meta property="twitter:title" content="@yield('title', 'AMT Coaches | Luxury Coach Hire in London & Minibus Rentals')">
-        <meta property="twitter:description" content="@yield('meta_description', 'AMT Coaches offers luxury coach hire in London and minibus rentals. Reliable, comfortable vehicles, professional drivers, and competitive prices.')">
-        <meta property="twitter:image" content="{{ asset('img/amt-coach-logo.png') }}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="{{ url()->current() }}">
+        <meta name="twitter:title" content="@yield('title', 'AMT Coaches | Luxury Coach Hire in London & Minibus Rentals')">
+        <meta name="twitter:description" content="@yield('meta_description', 'AMT Coaches offers luxury coach hire in London and minibus rentals. Reliable, comfortable vehicles, professional drivers, and competitive prices.')">
+        <meta name="twitter:image" content="{{ asset('img/amt-coach1.webp') }}">
 
 
         @php
@@ -50,7 +50,6 @@
 
 
         <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
         <link  href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
@@ -69,15 +68,15 @@
           "email": "info@amtcoaches.co.uk",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "London Gateway Services",
+            "streetAddress": "London Gateway Services, M1",
             "addressLocality": "London",
             "postalCode": "NW7 3HU",
-            "addressCountry": "UK"
+            "addressCountry": "GB"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 51.4320007,
-            "longitude": -0.4156480
+            "latitude": 51.6326,
+            "longitude": -0.2622
           },
           "openingHoursSpecification": [
             {
@@ -88,10 +87,11 @@
                 "Wednesday",
                 "Thursday",
                 "Friday",
-                "Saturday"
+                "Saturday",
+                "Sunday"
               ],
-              "opens": "09:00",
-              "closes": "19:00"
+              "opens": "00:00",
+              "closes": "23:59"
             }
           ]
         }
@@ -157,10 +157,10 @@
         <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a href="" class="navbar-brand p-0">
+                    <a href="{{ url(app()->getLocale()) }}" class="navbar-brand p-0">
                         <!-- <h1 class="display-6 text-primary"><i class="fas fa-bus me-3"></i>AMT<span class="nav-coach">Coaches<Span></h1> -->
                         <!-- <i class="fa-solid fa-bus me-3"></i> -->
-                        <img src="{{ asset('img/amt-coach-logo.png') }}" alt="Logo">
+                        <img src="{{ asset('img/amt-coach-logo.webp') }}" alt="AMT Coaches - Coach Hire London">
                     </a>
                     <div class="d-flex">
                         <div class="language-switch">
@@ -179,15 +179,19 @@
                     </div>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav mx-auto py-0">
-                            <a href="{{ url('/') }}" class="nav-item nav-link active">{{ __('Home') }}</a>
-                            <a href="{{ url('/about') }}" class="nav-item nav-link">{{ __('About Us') }}</a>
-                            <!-- <a href="{{ url('/services') }}" class="nav-item nav-link">{{ __('Service') }}</a> -->
+                            <a href="{{ url(app()->getLocale()) }}" class="nav-item nav-link active">{{ __('Home') }}</a>
+                            <a href="{{ url(app()->getLocale() . '/about') }}" class="nav-item nav-link">{{ __('About Us') }}</a>
+                            <!-- <a href="{{ url(app()->getLocale() . '/services') }}" class="nav-item nav-link">{{ __('Service') }}</a> -->
                             <div class="nav-item dropdown">
-                                <a href="{{ url('/services') }}" class="nav-item nav-link" data-bs-toggle="dropdown">{{ __('Service') }}</a>
+                                <a href="{{ url(app()->getLocale() . '/services') }}" class="nav-item nav-link" data-bs-toggle="dropdown">{{ __('Service') }}</a>
                                 <div class="dropdown-menu m-0">
-                                    <a href="{{ url('/corporate-coach-hire-london') }}" class="dropdown-item">{{ __('Corporate Coach Hire London') }}</a>
-                                    <a href="{{ url('/school-trips-coach-hire-london') }}" class="dropdown-item">{{ __('School Trip Coach Hire London') }}</a>
-                                    <a href="{{ url('/airport-transfers-london') }}" class="dropdown-item">{{ __('Airport Transfers in London') }}</a>
+                                    <a href="{{ url(app()->getLocale() . '/corporate-coach-hire-london') }}" class="dropdown-item">{{ __('Corporate Coach Hire London') }}</a>
+                                    <a href="{{ url(app()->getLocale() . '/school-trips-coach-hire-london') }}" class="dropdown-item">{{ __('School Trip Coach Hire London') }}</a>
+                                    <a href="{{ url(app()->getLocale() . '/airport-transfers-london') }}" class="dropdown-item">{{ __('Airport Transfers in London') }}</a>
+                                    <a href="{{ url(app()->getLocale() . '/minibus-hire-london') }}" class="dropdown-item">{{ __('Minibus Hire London') }}</a>
+                                    <a href="{{ url(app()->getLocale() . '/private-coach-hire-london') }}" class="dropdown-item">{{ __('Private Coach Hire London') }}</a>
+                                    <a href="{{ url(app()->getLocale() . '/rail-replacement-coach-hire') }}" class="dropdown-item">{{ __('Rail Replacement Coach Hire') }}</a>
+                                    <a href="{{ url(app()->getLocale() . '/services') }}" class="dropdown-item">{{ __('All Coach Hire Services') }}</a>
                                 </div>
                             </div>
                             {{-- <a href="{{ url()->current() }}?lang=ta">தமிழ்</a> --}}
@@ -195,15 +199,15 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown">{{ __('Our Fleet') }}</a>
                                 <div class="dropdown-menu m-0">
-                                    <a href="{{ url('/fleet') }}" class="dropdown-item">{{ __('16 - 61 seats coaches') }}</a>
+                                    <a href="{{ url(app()->getLocale() . '/fleet') }}" class="dropdown-item">{{ __('16 - 61 seats coaches') }}</a>
                                 </div>
                             </div>
-                            <a href="{{ url('/contact') }}" class="nav-item nav-link">{{ __('Contact Us') }}</a>
+                            <a href="{{ url(app()->getLocale() . '/contact') }}" class="nav-item nav-link">{{ __('Contact Us') }}</a>
                             @auth
                                 <a href="{{ url('/psv-pvc-inspection') }}" class="nav-item nav-link">{{ __('PSV') }}</a>
                             @endauth
                         </div>
-                        <a href="{{ url('/enquiry') }}" class="btn btn-primary rounded-pill py-2 px-4">{{ __('Hire Now') }}</a>
+                        <a href="{{ url(app()->getLocale() . '/enquiry') }}" class="btn btn-primary rounded-pill py-2 px-4">{{ __('Hire Now') }}</a>
                         @auth
                             <div class="nav-item dropdown ms-2 my-2">
                                 <a href="#" class="btn btn-secondary rounded-pill" data-bs-toggle="dropdown"><i class="fas fa-user"></i></a>
@@ -246,8 +250,8 @@
                                 <!-- <h4 class="text-primary mb-4">
                                     <i class="fas fa-bus me-2"></i>AMT<span class="nav-coach">Coaches<Span></Span>
                                 </h4> -->
-                                <a href="{{ url('/') }}" title="Coach hire in London"><img class="img-width" src="{{ asset('img/amt-coach-logo.png') }}" alt="AMT Coaches Logo - Luxury Coach Hire London" ></a>
-                                <p class="mb-3">{{ __('Welcome to AMT Coaches, your trusted provider for') }} <a href="{{ url('/') }}" class="text-white text-decoration-underline" title="coach hire in London">{{ __('coach hire in London') }}</a>. {{ __('We offer luxury travel for all occasions.') }}</p>
+                                <a href="{{ url(app()->getLocale()) }}" title="Coach hire in London"><img class="img-width" src="{{ asset('img/amt-coach-logo.webp') }}" alt="AMT Coaches Logo - Luxury Coach Hire London" ></a>
+                                <p class="mb-3">{{ __('Welcome to AMT Coaches, your trusted provider for') }} <a href="{{ url(app()->getLocale()) }}" class="text-white text-decoration-underline" title="coach hire in London">{{ __('coach hire in London') }}</a>. {{ __('We offer luxury travel for all occasions.') }}</p>
                                 <img src="{{ asset('img/DBS.webp') }}" alt="DBS Checked - AMT Coaches drivers are DBS checked" title="DBS Checked" loading="lazy" style="width: auto; max-height: 100px;">
                             </div>
                         </div>
@@ -255,27 +259,22 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">{{ __('Quick Links') }}</h4>
-                            <a href="{{ url('/about') }}"><i class="fas fa-angle-right me-2"></i>{{ __('About') }}</a>
-                            <a href="{{ url('/fleet') }}"><i class="fas fa-angle-right me-2"></i>{{ __('Fleet') }}</a>
-                            <a href="{{ url('/contact') }}"><i class="fas fa-angle-right me-2"></i>{{ __('Contact us') }}</a>
-                            <a href="{{ url('/enquiry') }}"><i class="fas fa-angle-right me-2"></i>{{ __('Hire Now') }}</a>
-                            <a href="{{ url('/terms-conditions') }}"><i class="fas fa-angle-right me-2"></i>{{ __('Terms & Conditions') }}</a>
+                            <a href="{{ url(app()->getLocale() . '/about') }}"><i class="fas fa-angle-right me-2"></i>{{ __('About') }}</a>
+                            <a href="{{ url(app()->getLocale() . '/fleet') }}"><i class="fas fa-angle-right me-2"></i>{{ __('Fleet') }}</a>
+                            <a href="{{ url(app()->getLocale() . '/services') }}"><i class="fas fa-angle-right me-2"></i>{{ __('Coach Hire Services') }}</a>
+                            <a href="{{ url(app()->getLocale() . '/minibus-hire-london') }}"><i class="fas fa-angle-right me-2"></i>{{ __('Minibus Hire London') }}</a>
+                            <a href="{{ url(app()->getLocale() . '/airport-transfers-london') }}"><i class="fas fa-angle-right me-2"></i>{{ __('Airport Transfers') }}</a>
+                            <a href="{{ url(app()->getLocale() . '/contact') }}"><i class="fas fa-angle-right me-2"></i>{{ __('Contact us') }}</a>
+                            <a href="{{ url(app()->getLocale() . '/enquiry') }}"><i class="fas fa-angle-right me-2"></i>{{ __('Hire Now') }}</a>
+                            <a href="{{ url(app()->getLocale() . '/terms-conditions') }}"><i class="fas fa-angle-right me-2"></i>{{ __('Terms & Conditions') }}</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">{{ __('Business Hours') }}</h4>
                             <div class="mb-3">
-                                <h6 class="text-muted mb-0">{{ __('Mon - Saturday:') }}</h6>
-                                <p class="text-white mb-0">{{ __('09:00 to 19:00 pm') }}</p>
-                            </div>
-                            {{-- <div class="mb-3">
-                                <h6 class="text-muted mb-0">Saturday:</h6>
-                                <p class="text-white mb-0">10:00 am to 17:00 pm</p>
-                            </div> --}}
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0">{{ __('Sunday:') }}</h6>
-                                <p class="text-white mb-0">{{ __('Closed') }}</p>
+                                <h6 class="text-muted mb-0">{{ __('Monday - Sunday:') }}</h6>
+                                <p class="text-white mb-0">{{ __('Open 24/7') }}</p>
                             </div>
                         </div>
                     </div>
@@ -308,7 +307,7 @@
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="{{ url('/') }}" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>AMTCoaches</a>, {{ __('All rights reserved.') }}</span>
+                        <span class="text-body"><a href="{{ url(app()->getLocale()) }}" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>AMTCoaches</a>, {{ __('All rights reserved.') }}</span>
                     </div>
                     <div class="col-md-6 text-center text-md-end text-body">
                         {{ __('Developed By') }} <a class="border-bottom text-white" href="https://itirepairs.co.uk/"> ITIRepairs Ltd</a>

@@ -1,47 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://www.amtcoaches.co.uk/</loc>
-  <lastmod>2025-07-05T21:36:48+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.amtcoaches.co.uk/about</loc>
-  <lastmod>2025-07-05T21:36:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.amtcoaches.co.uk/services</loc>
-  <lastmod>2025-07-05T21:36:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.amtcoaches.co.uk/fleet</loc>
-  <lastmod>2025-07-05T21:36:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.amtcoaches.co.uk/contact</loc>
-  <lastmod>2025-07-05T21:36:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.amtcoaches.co.uk/enquiry</loc>
-  <lastmod>2025-07-05T21:36:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.amtcoaches.co.uk/terms-conditions</loc>
-  <lastmod>2025-07-05T21:36:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.amtcoaches.co.uk/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amtcoaches.co.uk/en"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.amtcoaches.co.uk/ko"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amtcoaches.co.uk/en"/>
+    <lastmod>2026-11-18</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.amtcoaches.co.uk/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amtcoaches.co.uk/en/services"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.amtcoaches.co.uk/ko/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amtcoaches.co.uk/en/services"/>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.amtcoaches.co.uk/en/airport-transfers-london</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amtcoaches.co.uk/en/airport-transfers-london"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.amtcoaches.co.uk/ko/airport-transfers-london"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amtcoaches.co.uk/en/airport-transfers-london"/>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.amtcoaches.co.uk/en/corporate-coach-hire-london</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amtcoaches.co.uk/en/corporate-coach-hire-london"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.amtcoaches.co.uk/ko/corporate-coach-hire-london"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amtcoaches.co.uk/en/corporate-coach-hire-london"/>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.amtcoaches.co.uk/en/school-trips-coach-hire-london</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amtcoaches.co.uk/en/school-trips-coach-hire-london"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.amtcoaches.co.uk/ko/school-trips-coach-hire-london"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amtcoaches.co.uk/en/school-trips-coach-hire-london"/>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.amtcoaches.co.uk/en/minibus-hire-london</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amtcoaches.co.uk/en/minibus-hire-london"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.amtcoaches.co.uk/ko/minibus-hire-london"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amtcoaches.co.uk/en/minibus-hire-london"/>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.amtcoaches.co.uk/en/private-coach-hire-london</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amtcoaches.co.uk/en/private-coach-hire-london"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.amtcoaches.co.uk/ko/private-coach-hire-london"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amtcoaches.co.uk/en/private-coach-hire-london"/>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.amtcoaches.co.uk/en/rail-replacement-coach-hire</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amtcoaches.co.uk/en/rail-replacement-coach-hire"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.amtcoaches.co.uk/ko/rail-replacement-coach-hire"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amtcoaches.co.uk/en/rail-replacement-coach-hire"/>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.amtcoaches.co.uk/en/fleet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amtcoaches.co.uk/en/fleet"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.amtcoaches.co.uk/ko/fleet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amtcoaches.co.uk/en/fleet"/>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.amtcoaches.co.uk/en/enquiry</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amtcoaches.co.uk/en/enquiry"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.amtcoaches.co.uk/ko/enquiry"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amtcoaches.co.uk/en/enquiry"/>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.amtcoaches.co.uk/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amtcoaches.co.uk/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.amtcoaches.co.uk/ko/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amtcoaches.co.uk/en/contact"/>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.amtcoaches.co.uk/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amtcoaches.co.uk/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.amtcoaches.co.uk/ko/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amtcoaches.co.uk/en/about"/>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.amtcoaches.co.uk/en/terms-conditions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.amtcoaches.co.uk/en/terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.amtcoaches.co.uk/ko/terms-conditions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.amtcoaches.co.uk/en/terms-conditions"/>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.30</priority>
+  </url>
 </urlset>

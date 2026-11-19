@@ -1,2 +1,10 @@
 User-agent: *
-Disallow:
+Disallow: /dashboard
+Disallow: /admin/
+Disallow: /invoice/
+Disallow: /psv-pvc-inspection
+Disallow: /login
+Disallow: /register
+Disallow: /files/
+
+Sitemap: https://www.amtcoaches.co.uk/sitemap.xml

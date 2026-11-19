@@ -1,4 +1,6 @@
 @extends('layouts.template')
+@section('title', __('Get a Coach Hire Quote in London | AMT Coaches'))
+@section('meta_description', __('Request a free quote for coach or minibus hire in London. Tell us your date, route and group size and AMT Coaches will reply quickly with a price.'))
 @section('content')
 
 <style>
@@ -101,7 +103,7 @@
     <div class="row justify-content-center">
         <div class="col-lg-8">
             <div class="enquiry-card">
-                <h2 class="text-center mb-4 text-primary fw-bold">🚌 {{ __('Coach Bus Enquiry') }}</h2>
+                <h1 class="h2 text-center mb-4 text-primary fw-bold">🚌 {{ __('Coach Bus Enquiry') }}</h1>
                 <form method="POST" action="{{ route('enquiry.email') }}" id="contact-form">
                     @csrf
                     <div class="row g-4">

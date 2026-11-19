@@ -1,13 +1,13 @@
 @extends('layouts.template')
-@section('title', __('Luxury Coach Fleet | Minibus & Coach Hire London - AMT Coaches'))
-@section('meta_description', __('Explore our fleet of luxury 16 to 61 seater coaches. Perfect for corporate hire, school trips, and airport transfers in London.'))
+@section('title', __('16 to 61 Seater Coach & Minibus Hire London | AMT Coaches'))
+@section('meta_description', __('Our fleet: 16 seater minibuses and luxury coaches up to 61 seats, all with professional drivers. Ideal for airport transfers, school trips and corporate hire.'))
 @section('content')
 <!-- Header Start -->
 <div class="container-fluid bg-breadcrumb">
     <div class="container text-center py-5 about-container">
-        <h1 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">{{ __('Luxury Coaches') }}</h1>
+        <h1 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">{{ __('Coach & Minibus Fleet') }}</h1>
         <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-            <li class="breadcrumb-item"><a href="{{ url('/') }}">{{ __('Home') }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ url(app()->getLocale()) }}">{{ __('Home') }}</a></li>
             <li class="breadcrumb-item"><a href="#">{{ __('Pages') }}</a></li>
             <li class="breadcrumb-item active text-primary">{{ __('Our fleet') }}</li>
         </ol>
@@ -22,11 +22,11 @@
             <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
                 <div class="about-item">
                     <div class="pb-5">
-                        <h2 class="display-5 text-capitalize">{{ __('Luxury') }} <span class="text-primary">{{ __('Coaches') }}</span></h2>
+                        <h2 class="display-5 text-capitalize">{{ __('16 to 61 Seater') }} <span class="text-primary">{{ __('Coaches & Minibuses') }}</span></h2>
                         <p class="mb-0">{{ __('Luxury Coaches Para 1') }}
                         </p>
                     </div>
-                    <p class="text-item my-4">{{ __('Our modern fleet is maintained to the highest standards, making us the premier choice for') }} <a href="{{ url('/') }}" class="text-body text-decoration-underline" title="luxury coach hire in London">{{ __('luxury coach hire in London') }}</a> {{ __('and the surrounding boroughs.') }}
+                    <p class="text-item my-4">{{ __('Our modern fleet is maintained to the highest standards, making us the premier choice for') }} <a href="{{ url(app()->getLocale()) }}" class="text-body text-decoration-underline" title="luxury coach hire in London">{{ __('luxury coach hire in London') }}</a> {{ __('and the surrounding boroughs.') }}
                     </p>
                     <!-- <div class="row g-4">
                                 <div class="col-lg-6">
@@ -49,7 +49,7 @@
             <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                 <div class="about-img">
                     <div class="img-1">
-                        <img src="{{ asset('img/fleet-3.jpeg') }}" class="img-fluid rounded h-100 w-100" alt="AMT Coaches fleets">
+                        <img src="{{ asset('img/fleet-3.webp') }}" class="img-fluid rounded h-100 w-100" alt="AMT Coaches luxury coach and minibus fleet in London">
                     </div>
                 </div>
             </div>
@@ -157,14 +157,14 @@
 <div class="container-fluid banner pb-5 wow zoomInDown" data-wow-delay="0.1s">
     <div class="container pb-5">
         <div class="banner-item rounded">
-            <img src="{{ asset('img/amt-coach1.png') }}" class="img-fluid rounded w-100" alt="AMT Coaches | Coach Hire Services London">
+            <img src="{{ asset('img/amt-coach1.webp') }}" class="img-fluid rounded w-100" alt="AMT Coaches | Coach Hire Services London">
             <div class="banner-content">
                 <h3 class="text-primary">{{ __('Hire Coach') }}</h3>
                 <h2 class="text-white h1">{{ __('Affordable Coach Hire in London') }}</h2>
                 <p class="text-white">{{ __('Don\'t hesitate and send us a message.') }}</p>
                 <div class="banner-btn">
                     <a href="https://wa.me/+447564447775" class="btn btn-secondary rounded-pill py-3 px-4 px-md-5 me-2">{{ __('WhatsApp') }}</a>
-                    <a href="{{ url('/contact') }}" class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2">{{ __('Contact Us') }}</a>
+                    <a href="{{ url(app()->getLocale() . '/contact') }}" class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2">{{ __('Contact Us') }}</a>
                 </div>
             </div>
         </div>

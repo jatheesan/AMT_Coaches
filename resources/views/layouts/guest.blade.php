@@ -20,7 +20,7 @@
             <div>
                 <a href="/">
                     <!-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> -->
-                     <img class="w-20 h-20 fill-current" src="{{ asset('img/amt-coach-logo.png') }}" alt="Logo" >
+                     <img class="w-20 h-20 fill-current" src="{{ asset('img/amt-coach-logo.webp') }}" alt="Logo" >
                 </a>
             </div>
 
