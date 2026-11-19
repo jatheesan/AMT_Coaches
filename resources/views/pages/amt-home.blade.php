@@ -1,6 +1,6 @@
 @extends('layouts.template')
-@section('title', __('Coach Hire London & Minibus Hire with Driver | AMT Coaches'))
-@section('meta_description', __('Coach and minibus hire with driver in London, 16 to 61 seats. Airport transfers, school trips, corporate travel, UK tours and private hire. Free quotes.'))
+@section('title', __('Luxury Coach Hire in London & Minibus Hire | AMT Coaches'))
+@section('meta_description', __('Luxury coach hire in London and minibus hire with professional drivers, 16 to 61 seats. Airport transfers, school trips, corporate travel and UK tours.'))
 @section('content')
     <!-- Carousel Start -->
     <div class="header-carousel">
@@ -414,7 +414,7 @@
                         <div class="row g-4">
                             <div class="col-lg-6">
                                 <div class="text-center rounded bg-secondary p-4">
-                                    <p class="h5 text-light mb-0">{{ __('Experienced Drivers') }}</p>
+                                    <h3 class="h5 text-light mb-0">{{ __('Professional Drivers') }}</h3>
                                 </div>
                             </div>
                             <div class="col-lg-6">

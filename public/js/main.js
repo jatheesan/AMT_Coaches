@@ -12,9 +12,27 @@
     spinner(0);
     
     
-    // Initiate the wowjs. On phones the scroll animations are switched off so content shows immediately
-    // (WOW hides every animated block until it is scrolled into view, which slows mobile rendering).
-    new WOW({ mobile: false }).init();
+    // Scroll reveal for the template's ".wow" blocks.
+    // Replaces WOW.js, which hid every block (visibility: hidden) until it was scrolled into view:
+    // search engines and SEO tools that don't scroll only saw ~100 words of the page.
+    // This version only slides blocks up into place, so the text is always visible and readable.
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-in');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -8% 0px' });
+
+        document.querySelectorAll('.wow').forEach(function (el) {
+            if (el.getBoundingClientRect().top < window.innerHeight) return; // already on screen: leave as is
+            if (el.dataset.wowDelay) el.style.transitionDelay = el.dataset.wowDelay;
+            el.classList.add('reveal');
+            revealObserver.observe(el);
+        });
+    }
 
 
     // Sticky Navbar

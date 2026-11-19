@@ -1117,3 +1117,8 @@
 }
 /* Keep aspect ratio now that images carry width/height attributes (prevents layout shift) */
 .hover-image { height: auto; }
+
+/* Scroll reveal (replaces WOW.js): blocks slide up into place but are never hidden,
+   so search engines and SEO tools can read all the text */
+.reveal { transform: translateY(28px); transition: transform .9s cubic-bezier(.2, .7, .2, 1); }
+.reveal.reveal-in { transform: none; }
