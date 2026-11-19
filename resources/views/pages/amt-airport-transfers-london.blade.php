@@ -28,20 +28,20 @@
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center">
                             <i class="fa fa-plane fa-2x text-primary me-3"></i>
-                            <h6 class="mb-0">{{ __('Flight Monitoring') }}</h6>
+                            <h3 class="h6 mb-0">{{ __('Flight Monitoring') }}</h3>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center">
                             <i class="fa fa-suitcase fa-2x text-primary me-3"></i>
-                            <h6 class="mb-0">{{ __('Ample Luggage Space') }}</h6>
+                            <h3 class="h6 mb-0">{{ __('Ample Luggage Space') }}</h3>
                         </div>
                     </div>
                 </div>
                 <a href="{{ url(app()->getLocale() . '/enquiry') }}" class="btn btn-primary rounded-pill py-3 px-5 mt-3">{{ __('Book Your Transfer') }}</a>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <img src="{{ asset('img/AMT-Coach-AirportHire2.webp') }}" class="img-fluid rounded w-100" alt="{{ __('Luxury coach at London Heathrow airport for hire') }}">
+                <img width="900" height="514" src="{{ asset('img/AMT-Coach-AirportHire2.webp') }}" class="img-fluid rounded w-100" alt="{{ __('Luxury coach at London Heathrow airport for hire') }}">
             </div>
         </div>
     </div>

@@ -41,7 +41,7 @@
                 <a href="{{ url(app()->getLocale() . '/contact') }}" class="btn btn-primary rounded-pill py-3 px-5 mt-3">{{ __('Contact Our Team') }}</a>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <img src="{{ asset('img/AMT-Coach-RailReplacement.webp') }}" class="img-fluid rounded w-100" loading="lazy" alt="{{ __('Rail replacement coach services in London') }}">
+                <img width="900" height="514" src="{{ asset('img/AMT-Coach-RailReplacement.webp') }}" class="img-fluid rounded w-100" loading="lazy" alt="{{ __('Rail replacement coach services in London') }}">
             </div>
         </div>
     </div>

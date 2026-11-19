@@ -32,7 +32,7 @@
                                 <div class="col-lg-6">
                                     <div class="text-center rounded bg-secondary p-4">
                                         <h1 class="display-6 text-white">25</h1>
-                                        <h5 class="text-light mb-0">Years Of Experience</h5>
+                                        <h3 class="h5 text-light mb-0">Years Of Experience</h3>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -49,7 +49,7 @@
             <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                 <div class="about-img">
                     <div class="img-1">
-                        <img src="{{ asset('img/fleet-3.webp') }}" class="img-fluid rounded h-100 w-100" alt="AMT Coaches luxury coach and minibus fleet in London">
+                        <img width="1500" height="1125" src="{{ asset('img/fleet-3.webp') }}" class="img-fluid rounded h-100 w-100" alt="AMT Coaches luxury coach and minibus fleet in London">
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="feature-item">
                             <div class="ms-4">
-                                <h5 class="mb-3">{{ __('Comfort & Seating') }}</h5>
+                                <h3 class="h5 mb-3">{{ __('Comfort & Seating') }}</h3>
                                 <div class="rounded">
                                     <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> {{ __('Deluxe half-leather reclining seats with added padding and extra legroom') }}</p>
                                     <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> {{ __('Seat-back tables and magazine nets for personal storage') }}</p>
@@ -86,7 +86,7 @@
                     <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="feature-item">
                             <div class="ms-4">
-                                <h5 class="mb-3">{{ __('Entertainment & Connectivity') }}</h5>
+                                <h3 class="h5 mb-3">{{ __('Entertainment & Connectivity') }}</h3>
                                 <div class="rounded">
                                     <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> {{ __('Multi-screen DVD system and integrated radio/PA system') }}</p>
                                     <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> {{ __('Forward-facing camera view displayed on passenger screens') }}</p>
@@ -99,7 +99,7 @@
                     <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="feature-item">
                             <div class="ms-4">
-                                <h5 class="mb-3">{{ __('Design & Practicality') }}</h5>
+                                <h3 class="h5 mb-3">{{ __('Design & Practicality') }}</h3>
                                 <div class="rounded">
                                     <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> {{ __('Tinted, double-glazed panoramic windows with curtains') }}</p>
                                     <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> {{ __('Luxurious Flotex carpeted interior') }}</p>
@@ -116,7 +116,7 @@
                     <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="feature-item">
                             <div class="me-4">
-                                <h5 class="mb-3">{{ __('Safety Features') }}</h5>
+                                <h3 class="h5 mb-3">{{ __('Safety Features') }}</h3>
                                 <div class="rounded">
                                     <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> {{ __('Hand sanitiser dispenser to promote onboard hygiene and passenger health') }}</p>
                                     <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> {{ __('Advanced braking systems, including engine braking, ABS (Anti-lock Braking System), and ASR (Anti-Slip Regulation) for optimal control') }}</p>
@@ -137,7 +137,7 @@
                     <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="feature-item">
                             <div class="me-4">
-                                <h5 class="mb-3">{{ __('Onboard Facilities') }}</h5>
+                                <h3 class="h5 mb-3">{{ __('Onboard Facilities') }}</h3>
                                 <div class="rounded">
                                     <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> {{ __('Toilet and washroom equipped with hand dryer') }}</p>
                                     <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> {{ __('Kitchen with hot and cold drinks facilities') }}</p>
@@ -157,7 +157,7 @@
 <div class="container-fluid banner pb-5 wow zoomInDown" data-wow-delay="0.1s">
     <div class="container pb-5">
         <div class="banner-item rounded">
-            <img src="{{ asset('img/amt-coach1.webp') }}" class="img-fluid rounded w-100" alt="AMT Coaches | Coach Hire Services London">
+            <img width="1344" height="768" src="{{ asset('img/amt-coach1.webp') }}" class="img-fluid rounded w-100" alt="AMT Coaches | Coach Hire Services London">
             <div class="banner-content">
                 <h3 class="text-primary">{{ __('Hire Coach') }}</h3>
                 <h2 class="text-white h1">{{ __('Affordable Coach Hire in London') }}</h2>

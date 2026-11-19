@@ -32,7 +32,7 @@
                                 <i class="fas fa-map-marker-alt fa-2x"></i>
                             </div>
                             <div>
-                                <h4>{{ __('Address')}}</h4>
+                                <h3 class="h4">{{ __('Address')}}</h3>
                                 <p class="mb-0">London Gateway Services,</br>
                                     M1, London</br>
                                     NW7 3HU, UK</p>
@@ -45,7 +45,7 @@
                                 <i class="fas fa-envelope fa-2x"></i>
                             </div>
                             <div>
-                                <h4>{{ __('Mail Us')}}</h4>
+                                <h3 class="h4">{{ __('Mail Us')}}</h3>
                                 <p class="mb-0">info@amtcoaches.co.uk</p>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                                 <i class="fa fa-phone-alt fa-2x"></i>
                             </div>
                             <div>
-                                <h4>{{ __('Telephone')}}</h4>
+                                <h3 class="h4">{{ __('Telephone')}}</h3>
                                 <p class="mb-0"> +447564447775</p>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                                 <i class="fab fa-firefox-browser fa-2x"></i>
                             </div>
                             <div>
-                                <h4>{{ __('WhatsApp')}}</h4>
+                                <h3 class="h4">{{ __('WhatsApp')}}</h3>
                                 <a href="https://wa.me/+447564447775" class="mb-0">+447564447775</a>
                                 <!-- <p class="mb-0"> +447564447775</p> -->
                             </div>
@@ -83,7 +83,7 @@
                             {{ session('success') }}
                         </div>
                     @endif
-                    <h4 class="text-primary mb-4">{{ __('Send Your Message')}}</h4>
+                    <h3 class="h4 text-primary mb-4">{{ __('Send Your Message')}}</h3>
                     <form method="post" action="{{ route('contact.email') }}" id="contact-form"#>
                         {{ csrf_field() }}
 

@@ -28,20 +28,20 @@
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center">
                             <i class="fa fa-briefcase fa-2x text-primary me-3"></i>
-                            <h6 class="mb-0">{{ __('Professional Drivers') }}</h6>
+                            <h3 class="h6 mb-0">{{ __('Professional Drivers') }}</h3>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center">
                             <i class="fa fa-plug fa-2x text-primary me-3"></i>
-                            <h6 class="mb-0">{{ __('On-board Power/USB') }}</h6>
+                            <h3 class="h6 mb-0">{{ __('On-board Power/USB') }}</h3>
                         </div>
                     </div>
                 </div>
                 <a href="{{ url(app()->getLocale() . '/enquiry') }}" class="btn btn-primary rounded-pill py-3 px-5 mt-3">{{ __('Request Corporate Quote') }}</a>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <img src="{{ asset('img/AMT-Coach-CoporateHire.webp') }}" class="img-fluid rounded w-100" alt="{{ __('Corporate professionals boarding an AMT luxury coach in London') }}">
+                <img width="900" height="514" src="{{ asset('img/AMT-Coach-CoporateHire.webp') }}" class="img-fluid rounded w-100" alt="{{ __('Corporate professionals boarding an AMT luxury coach in London') }}">
             </div>
         </div>
     </div>

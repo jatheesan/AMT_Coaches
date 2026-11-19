@@ -353,9 +353,9 @@
             <div class="row g-5">
                 <div class="col-lg-6 fadeInRight animated animation-style" data-animation="fadeInRight" data-delay="1s">
                     <div class="text-start">
-                        <h4 class="text-primary text-uppercase mb-3">{{ __('UK Coach Tours & Day Trips') }}</h4>
-                        <h2 class="display-5 text-white">{{ __('Explore UK Landmarks') }} <span class="text-primary">{{ __('by Coach') }}</span></h2>
-                        <p class="mb-2">{{ __('From London to Edinburgh, travel in comfort with our professional drivers.') }}</p>
+                        <p class="h4 text-primary text-uppercase mb-3">{{ __('UK Coach Tours & Day Trips') }}</p>
+                        <h1 class="display-5 text-white">{{ __('Coach Hire in London') }} <span class="text-primary">{{ __('& UK Tours') }}</span></h1>
+                        <p class="mb-2">{{ __('Explore the UK\'s famous landmarks by coach, from London to Edinburgh, with our professional drivers.') }}</p>
                         <p class="london-clip-ticker mb-4">
                             <i class="fas fa-map-marker-alt text-primary me-2"></i>{{ __('Now passing:') }}
                             <span class="london-clip-names">

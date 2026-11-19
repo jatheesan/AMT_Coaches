@@ -37,23 +37,23 @@
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+        {{-- Only the weights the site uses (the full italic + variable set was a large render-blocking download) --}}
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@400..900&display=swap" rel="stylesheet">
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus@6.8.0/dist/css/tempus-dominus.min.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        {{-- Icons and animation styles are not needed for the first paint: load them without blocking rendering --}}
+        @foreach ([
+            'https://use.fontawesome.com/releases/v5.15.4/css/all.css',
+            'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css',
+            asset('lib/animate/animate.min.css'),
+            asset('lib/owlcarousel/assets/owl.carousel.min.css'),
+        ] as $deferredCss)
+            <link rel="stylesheet" href="{{ $deferredCss }}" media="print" onload="this.media='all'">
+            <noscript><link rel="stylesheet" href="{{ $deferredCss }}"></noscript>
+        @endforeach
 
-        <!-- Libraries Stylesheet -->
-        <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-
-
-        <!-- Customized Bootstrap Stylesheet -->
-
-        <!-- Template Stylesheet -->
-        <link  href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <!-- Template Stylesheet (version query busts the browser cache when the file changes) -->
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/style.css') }}?v={{ filemtime(public_path('css/style.css')) }}" rel="stylesheet">
 
         <!-- LocalBusiness Schema Markup -->
         <script type="application/ld+json">
@@ -111,13 +111,8 @@
 
     <body>
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary template-spinner"  role="status">
-                <span class="sr-only">AMT</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
+        {{-- The full-screen loading spinner was removed: it hid the whole page until every script had loaded,
+             which delayed the first paint (PageSpeed LCP 5.8s on mobile). --}}
 
         <!-- Topbar Start -->
         <div class="container-fluid topbar bg-secondary d-none d-xl-block w-100">
@@ -252,13 +247,13 @@
                                 </h4> -->
                                 <a href="{{ url(app()->getLocale()) }}" title="Coach hire in London"><img class="img-width" src="{{ asset('img/amt-coach-logo.webp') }}" alt="AMT Coaches Logo - Luxury Coach Hire London" ></a>
                                 <p class="mb-3">{{ __('Welcome to AMT Coaches, your trusted provider for') }} <a href="{{ url(app()->getLocale()) }}" class="text-white text-decoration-underline" title="coach hire in London">{{ __('coach hire in London') }}</a>. {{ __('We offer luxury travel for all occasions.') }}</p>
-                                <img src="{{ asset('img/DBS.webp') }}" alt="DBS Checked - AMT Coaches drivers are DBS checked" title="DBS Checked" loading="lazy" style="width: auto; max-height: 100px;">
+                                <img width="360" height="110" src="{{ asset('img/DBS.webp') }}" alt="DBS Checked - AMT Coaches drivers are DBS checked" title="DBS Checked" loading="lazy" style="width: auto; max-height: 100px;">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">{{ __('Quick Links') }}</h4>
+                            <h2 class="h4 text-white mb-4">{{ __('Quick Links') }}</h2>
                             <a href="{{ url(app()->getLocale() . '/about') }}"><i class="fas fa-angle-right me-2"></i>{{ __('About') }}</a>
                             <a href="{{ url(app()->getLocale() . '/fleet') }}"><i class="fas fa-angle-right me-2"></i>{{ __('Fleet') }}</a>
                             <a href="{{ url(app()->getLocale() . '/services') }}"><i class="fas fa-angle-right me-2"></i>{{ __('Coach Hire Services') }}</a>
@@ -271,16 +266,16 @@
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">{{ __('Business Hours') }}</h4>
+                            <h2 class="h4 text-white mb-4">{{ __('Business Hours') }}</h2>
                             <div class="mb-3">
-                                <h6 class="text-muted mb-0">{{ __('Monday - Sunday:') }}</h6>
+                                <p class="h6 text-muted mb-0">{{ __('Monday - Sunday:') }}</p>
                                 <p class="text-white mb-0">{{ __('Open 24/7') }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">{{ __('Contact Info') }}</h4>
+                            <h2 class="h4 text-white mb-4">{{ __('Contact Info') }}</h2>
                             <a href="#"><i class="fa fa-map-marker-alt me-2"></i> 
                                     London Gateway Services,</br>
                                     M1, London</br>
@@ -333,7 +328,7 @@
     
 
     <!-- Template Javascript -->
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}?v={{ filemtime(public_path('js/main.js')) }}"></script>
     <script>
         function changeLanguage(locale) {
             let currentPath = window.location.pathname.split('/').slice(2).join('/');

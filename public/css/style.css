@@ -1115,3 +1115,5 @@
     opacity: 1;
     visibility: visible;
 }
+/* Keep aspect ratio now that images carry width/height attributes (prevents layout shift) */
+.hover-image { height: auto; }

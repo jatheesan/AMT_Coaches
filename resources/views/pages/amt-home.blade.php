@@ -18,7 +18,7 @@
                     @include('partials.hero-london-clip')
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('img/amt-coach2.webp') }}" class="img-fluid w-100"
+                    <img width="1344" height="768" src="{{ asset('img/amt-coach2.webp') }}" class="img-fluid w-100"
                         alt="{{ __('AMT Coaches | Luxury 53-seater coach exterior - coach hire in London') }}" />
                     <div class="carousel-caption">
                         <div class="container py-4">
@@ -26,7 +26,7 @@
                                 <div class="col-lg-6 d-none d-lg-flex fadeInRight animated animation-style"
                                     data-animation="fadeInRight" data-delay="1s">
                                     <div class="text-start tx-center">
-                                        <h1 class="display-5 text-white">{{ __('Luxury Coach Hire in London') }}</h1>
+                                        <h2 class="display-5 text-white">{{ __('Luxury Coach Hire in London') }}</h2>
                                         <p>{{ __('Travel in style and comfort with our premium fleet and professional drivers.') }}
                                         </p>
                                         <a href="{{ url(app()->getLocale() . '/contact') }}"
@@ -96,7 +96,7 @@
                                         }
                                     </style>
                                     <div class="bg-secondary rounded p-3 p-md-4 p-lg-5 hero-form-card">
-                                        <h4 class="text-white mb-4">{{ __('MAKE YOUR ENQUIRY') }}</h4>
+                                        <h2 class="h4 text-white mb-4">{{ __('MAKE YOUR ENQUIRY') }}</h2>
                                         <form method="post" action="{{ route('enquiry.email') }}" id="contact-form">
                                             {{ csrf_field() }}
                                             <div class="row hero-form-row mt-n2">
@@ -244,7 +244,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('img/amt-coach3.webp') }}" class="img-fluid w-100"
+                    <img width="1280" height="800" src="{{ asset('img/amt-coach3.webp') }}" class="img-fluid w-100"
                         alt="{{ __('AMT Coaches | Luxury Minibuses & Coaches for hire in London') }}" />
                     <div class="carousel-caption">
                         <div class="container py-4">
@@ -282,9 +282,9 @@
                             <span class="fa fa-plane fa-2x"></span>
                         </div>
                         <div class="ms-4 hover-box">
-                            <h5 class="mb-3"><a href="{{ url(app()->getLocale() . '/airport-transfers-london') }}" class="text-dark">{{ __('Airport Hire') }}</a></h5>
+                            <h3 class="h5 mb-3"><a href="{{ url(app()->getLocale() . '/airport-transfers-london') }}" class="text-dark">{{ __('Airport Hire') }}</a></h3>
                             <p class="mb-0">{{ __('Airport Hire Para') }}</p>
-                            <img loading="lazy" class="hover-image" src="{{ asset('img/AMT-Coach-AirportHire2.webp') }}"
+                            <img width="900" height="514" loading="lazy" class="hover-image" src="{{ asset('img/AMT-Coach-AirportHire2.webp') }}"
                                 alt="Airport coach transfers to Heathrow, Gatwick, Stansted and Luton">
                         </div>
                     </div>
@@ -299,9 +299,9 @@
                                     <span class="fa fa-trophy fa-2x"></span>
                                 </div>
                                 <div class="ms-4 hover-box">
-                                    <h5 class="mb-3"><a href="{{ url(app()->getLocale() . '/private-coach-hire-london') }}" class="text-dark">{{ __('Private Hire') }}</a></h5>
+                                    <h3 class="h5 mb-3"><a href="{{ url(app()->getLocale() . '/private-coach-hire-london') }}" class="text-dark">{{ __('Private Hire') }}</a></h3>
                                     <p class="mb-0">{{ __('Private Hire Para') }}</p>
-                                    <img loading="lazy" class="hover-image"
+                                    <img width="900" height="514" loading="lazy" class="hover-image"
                                         src="{{ asset('img/AMT-Coach-PrivateHire.webp') }}" alt="Private coach hire with driver in London">
                                 </div>
                             </div>
@@ -312,9 +312,9 @@
                                     <span class="fa fa-road fa-2x"></span>
                                 </div>
                                 <div class="ms-4 hover-box">
-                                    <h5 class="mb-3"><a href="{{ url(app()->getLocale() . '/corporate-coach-hire-london') }}" class="text-dark">{{ __('Corporate Hire') }}</a></h5>
+                                    <h3 class="h5 mb-3"><a href="{{ url(app()->getLocale() . '/corporate-coach-hire-london') }}" class="text-dark">{{ __('Corporate Hire') }}</a></h3>
                                     <p class="mb-0">{{ __('Corporate Hire Para') }}</p>
-                                    <img loading="lazy" class="hover-image"
+                                    <img width="900" height="514" loading="lazy" class="hover-image"
                                         src="{{ asset('img/AMT-Coach-CoporateHire.webp') }}" alt="Corporate coach hire for business events in London">
                                 </div>
                             </div>
@@ -322,7 +322,7 @@
                     </div>
                 </div>
                 <div class="col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                    <img loading="lazy" src="{{ asset('img/amt-coach6.webp') }}" class="img-fluid w-100 about-bus-img"
+                    <img width="1920" height="1237" loading="lazy" src="{{ asset('img/amt-coach6.webp') }}" class="img-fluid w-100 about-bus-img"
                         alt="AMT Coaches | Coach Hire Services London">
                 </div>
                 <div class="col-xl-4">
@@ -330,9 +330,9 @@
                         <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="feature-item justify-content-end">
                                 <div class="text-end me-4 hover-box">
-                                    <h5 class="mb-3">{{ __('Tour Operators') }}</h5>
+                                    <h3 class="h5 mb-3">{{ __('Tour Operators') }}</h3>
                                     <p class="mb-0"> {{ __('Tour Operators Para') }}</p>
-                                    <img loading="lazy" class="hover-image" src="{{ asset('img/AMT-Coach-tour.webp') }}"
+                                    <img width="900" height="514" loading="lazy" class="hover-image" src="{{ asset('img/AMT-Coach-tour.webp') }}"
                                         alt="Coach hire for tour operators and sightseeing tours">
                                 </div>
                                 <div class="feature-icon">
@@ -343,9 +343,9 @@
                         <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="feature-item justify-content-end">
                                 <div class="text-end me-4 hover-box">
-                                    <h5 class="mb-3"><a href="{{ url(app()->getLocale() . '/school-trips-coach-hire-london') }}" class="text-dark">{{ __('Schools & Colleges') }}</a></h5>
+                                    <h3 class="h5 mb-3"><a href="{{ url(app()->getLocale() . '/school-trips-coach-hire-london') }}" class="text-dark">{{ __('Schools & Colleges') }}</a></h3>
                                     <p class="mb-0">{{ __('Schools & Colleges Hire Para') }}</p>
-                                    <img loading="lazy" class="hover-image"
+                                    <img width="900" height="514" loading="lazy" class="hover-image"
                                         src="{{ asset('img/AMT-Coach-SchoolHire.webp') }}"
                                         alt="School trip coach hire for schools and colleges">
                                 </div>
@@ -364,9 +364,9 @@
                             <span class="fa fa-train fa-2x"></span>
                         </div>
                         <div class="ms-4 hover-box">
-                            <h5 class="mb-3"><a href="{{ url(app()->getLocale() . '/rail-replacement-coach-hire') }}" class="text-dark">{{ __('Rail Replacement') }}</a></h5>
+                            <h3 class="h5 mb-3"><a href="{{ url(app()->getLocale() . '/rail-replacement-coach-hire') }}" class="text-dark">{{ __('Rail Replacement') }}</a></h3>
                             <p class="mb-0">{{ __('Rail Replacement Para') }}</p>
-                            <img loading="lazy" class="hover-image" src="{{ asset('img/AMT-Coach-RailReplacement.webp') }}"
+                            <img width="900" height="514" loading="lazy" class="hover-image" src="{{ asset('img/AMT-Coach-RailReplacement.webp') }}"
                                 alt="Rail replacement coach services in London">
                         </div>
                     </div>
@@ -391,20 +391,20 @@
                             <div class="col-lg-6">
                                 <div class="about-item-inner border p-4">
                                     <div class="about-icon mb-4">
-                                        <img loading="lazy" src="{{ asset('img/about-icon-1.webp') }}"
+                                        <img width="100" height="100" loading="lazy" src="{{ asset('img/about-icon-1.webp') }}"
                                             class="img-fluid w-50 h-50" alt="AMT Coaches vision">
                                     </div>
-                                    <h5 class="mb-3">{{ __('Our Vision') }}</h5>
+                                    <h3 class="h5 mb-3">{{ __('Our Vision') }}</h3>
                                     <p class="mb-0">{{ __('Our Vision Para') }}</p>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="about-item-inner border p-4">
                                     <div class="about-icon mb-4">
-                                        <img loading="lazy" src="{{ asset('img/about-icon-2.webp') }}"
+                                        <img width="100" height="100" loading="lazy" src="{{ asset('img/about-icon-2.webp') }}"
                                             class="img-fluid h-50 w-50" alt="AMT Coaches mission">
                                     </div>
-                                    <h5 class="mb-3">{{ __('Our Mission') }}</h5>
+                                    <h3 class="h5 mb-3">{{ __('Our Mission') }}</h3>
                                     <p class="mb-0">{{ __('Our Mission Para') }}</p>
                                 </div>
                             </div>
@@ -414,7 +414,7 @@
                         <div class="row g-4">
                             <div class="col-lg-6">
                                 <div class="text-center rounded bg-secondary p-4">
-                                    <h5 class="text-light mb-0">{{ __('Experienced Drivers') }}</h5>
+                                    <p class="h5 text-light mb-0">{{ __('Experienced Drivers') }}</p>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -441,11 +441,11 @@
                 <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                     <div class="about-img">
                         <div class="img-1">
-                            <img loading="lazy" src="{{ asset('img/fleet-2.webp') }}" class="img-fluid rounded h-100 w-100"
+                            <img width="1600" height="1200" loading="lazy" src="{{ asset('img/fleet-2.webp') }}" class="img-fluid rounded h-100 w-100"
                                 alt="AMT Coaches | Coach Hire Services London">
                         </div>
                         <div class="img-2">
-                            <img loading="lazy" src="{{ asset('img/amt-coach7.webp') }}" class="img-fluid rounded w-100"
+                            <img width="1344" height="768" loading="lazy" src="{{ asset('img/amt-coach7.webp') }}" class="img-fluid rounded w-100"
                                 alt="AMT Coaches | Coach Hire Services London">
                         </div>
                     </div>
@@ -526,7 +526,7 @@
                         <div class="service-icon mb-4">
                             <i class="fa fa-phone-alt fa-2x"></i>
                         </div>
-                        <h5 class="mb-3">{{ __('Phone Reservation') }}</h5>
+                        <h3 class="h5 mb-3">{{ __('Phone Reservation') }}</h3>
                         <p class="mb-0">{{ __('Phone Reservation Para') }}</p>
                     </div>
                 </div>
@@ -535,7 +535,7 @@
                         <div class="service-icon mb-4">
                             <i class="fa fa-money-bill-alt fa-2x"></i>
                         </div>
-                        <h5 class="mb-3">{{ __('Special Rates') }}</h5>
+                        <h3 class="h5 mb-3">{{ __('Special Rates') }}</h3>
                         <p class="mb-0">{{ __('Special Rates Para') }}</p>
                     </div>
                 </div>
@@ -544,7 +544,7 @@
                         <div class="service-icon mb-4">
                             <i class="fa fa-road fa-2x"></i>
                         </div>
-                        <h5 class="mb-3">{{ __('One Way Hire') }}</h5>
+                        <h3 class="h5 mb-3">{{ __('One Way Hire') }}</h3>
                         <p class="mb-0">{{ __('One Way Hire Para') }}</p>
                     </div>
                 </div>
@@ -553,7 +553,7 @@
                         <div class="service-icon mb-4">
                             <i class="fa fa-umbrella fa-2x"></i>
                         </div>
-                        <h5 class="mb-3">{{ __('Pristine Presentation') }}</h5>
+                        <h3 class="h5 mb-3">{{ __('Pristine Presentation') }}</h3>
                         <p class="mb-0">{{ __('Pristine Presentation Para') }}</p>
                     </div>
                 </div>
@@ -562,7 +562,7 @@
                         <div class="service-icon mb-4">
                             <i class="fa fa-building fa-2x"></i>
                         </div>
-                        <h5 class="mb-3">{{ __('City to City') }}</h5>
+                        <h3 class="h5 mb-3">{{ __('City to City') }}</h3>
                         <p class="mb-0"> {{ __('City to City Para') }}</p>
                     </div>
                 </div>
@@ -571,7 +571,7 @@
                         <div class="service-icon mb-4">
                             <i class="fa fa-car-alt fa-2x"></i>
                         </div>
-                        <h5 class="mb-3">{{ __('Professional Maintenance') }}</h5>
+                        <h3 class="h5 mb-3">{{ __('Professional Maintenance') }}</h3>
                         <p class="mb-0">{{ __('Professional Maintenance Para') }}</p>
                     </div>
                 </div>
@@ -630,10 +630,10 @@
     <div class="container-fluid banner pb-5 wow zoomInDown" data-wow-delay="0.1s">
         <div class="container pb-5">
             <div class="banner-item rounded">
-                <img loading="lazy" src="{{ asset('img/amt-coach1.webp') }}" class="img-fluid rounded w-100"
+                <img width="1344" height="768" loading="lazy" src="{{ asset('img/amt-coach1.webp') }}" class="img-fluid rounded w-100"
                     alt="AMT Coaches | Coach Hire Services London">
                 <div class="banner-content">
-                    <h3 class="text-primary">{{ __('Hire Coach') }}</h3>
+                    <p class="h3 text-primary">{{ __('Hire Coach') }}</p>
                     <h2 class="text-white h1">{{ __('Affordable Coach Hire in London') }}</h2>
                     <p class="text-white">{{ __('Don\'t hesitate and send us a message.') }}</p>
                     <div class="banner-btn">

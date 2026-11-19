@@ -152,7 +152,7 @@
 
                         {{-- ==================== PICKUP ADDRESS SECTION ==================== --}}
                         <div class="col-md-12">
-                            <h5 class="section-heading"><i class="fas fa-map-marker-alt text-primary me-2"></i>{{ __('Pickup Address') }}</h5>
+                            <h2 class="h5 section-heading"><i class="fas fa-map-marker-alt text-primary me-2"></i>{{ __('Pickup Address') }}</h2>
                         </div>
 
                         <div class="col-md-8">
@@ -181,7 +181,7 @@
 
                         {{-- ==================== DESTINATION ADDRESS SECTION ==================== --}}
                         <div class="col-md-12 mt-2">
-                            <h5 class="section-heading"><i class="fas fa-map-marker-alt text-danger me-2"></i>{{ __('Destination Address') }}</h5>
+                            <h2 class="h5 section-heading"><i class="fas fa-map-marker-alt text-danger me-2"></i>{{ __('Destination Address') }}</h2>
                         </div>
 
                         <div class="col-md-8">

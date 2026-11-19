@@ -41,7 +41,7 @@
                 <a href="{{ url(app()->getLocale() . '/enquiry') }}" class="btn btn-primary rounded-pill py-3 px-5 mt-3">{{ __('Get a Free Quote') }}</a>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <img src="{{ asset('img/AMT-Coach-PrivateHire.webp') }}" class="img-fluid rounded w-100" loading="lazy" alt="{{ __('Private coach hire with driver for weddings and events in London') }}">
+                <img width="900" height="514" src="{{ asset('img/AMT-Coach-PrivateHire.webp') }}" class="img-fluid rounded w-100" loading="lazy" alt="{{ __('Private coach hire with driver for weddings and events in London') }}">
             </div>
         </div>
     </div>

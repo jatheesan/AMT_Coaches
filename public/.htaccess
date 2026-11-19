@@ -5,6 +5,15 @@
 
     RewriteEngine On
 
+    # SEO: send the homepage straight to the canonical English home in ONE redirect
+    # (instead of non-www -> www -> / -> /en). Only applies on the live domain.
+    RewriteCond %{HTTP_HOST} ^(www\.)?amtcoaches\.co\.uk$ [NC]
+    RewriteRule ^$ https://www.amtcoaches.co.uk/en [L,R=301]
+
+    # SEO: any other page on the bare domain goes straight to the www version
+    RewriteCond %{HTTP_HOST} ^amtcoaches\.co\.uk$ [NC]
+    RewriteRule ^(.*)$ https://www.amtcoaches.co.uk/$1 [L,R=301]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -18,4 +27,20 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+</IfModule>
+
+# Browser caching (PageSpeed "Use efficient cache lifetimes").
+# style.css and main.js carry a ?v= version in the template, so long lifetimes are safe for them.
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 6 months"
+    ExpiresByType image/png "access plus 6 months"
+    ExpiresByType image/jpeg "access plus 6 months"
+    ExpiresByType image/svg+xml "access plus 6 months"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
 </IfModule>

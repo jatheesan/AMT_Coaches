@@ -440,7 +440,7 @@
 <div class="container-fluid banner pb-5 wow zoomInDown" data-wow-delay="0.1s">
     <div class="container pb-5">
         <div class="banner-item rounded">
-            <img src="{{ asset('img/amt-coach1.webp') }}" class="img-fluid rounded w-100" alt="AMT Coaches | Coach Hire Services London">
+            <img width="1344" height="768" src="{{ asset('img/amt-coach1.webp') }}" class="img-fluid rounded w-100" alt="AMT Coaches | Coach Hire Services London">
             <div class="banner-content">
                 <h2 class="text-primary">{{ __('Hire Coach') }}</h2>
                 <p class="text-white">{{ __('Don\'t hesitate and send us a message.') }}</p>

@@ -12,8 +12,9 @@
     spinner(0);
     
     
-    // Initiate the wowjs
-    new WOW().init();
+    // Initiate the wowjs. On phones the scroll animations are switched off so content shows immediately
+    // (WOW hides every animated block until it is scrolled into view, which slows mobile rendering).
+    new WOW({ mobile: false }).init();
 
 
     // Sticky Navbar

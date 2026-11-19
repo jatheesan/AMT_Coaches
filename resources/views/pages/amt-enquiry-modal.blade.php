@@ -4,7 +4,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="confirmationModalLabel">Confirm Your Enquiry</h5>
+                <h2 class="modal-title h5" id="confirmationModalLabel">Confirm Your Enquiry</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -15,14 +15,14 @@
                 <div class="mb-3"><strong>No. of Passengers:</strong> <span id="confirm-noofpassenger"></span></div>
 
                 <hr>
-                <h6 class="fw-bold text-primary">Pickup Details</h6>
+                <h3 class="h6 fw-bold text-primary">Pickup Details</h3>
                 <div class="mb-3"><strong>Pickup Address:</strong> <span id="confirm-pickupaddress"></span></div>
                 <div class="mb-3"><strong>Pickup Postcode:</strong> <span id="confirm-pickup-postcode"></span></div>
                 <div class="mb-3"><strong>Pickup Date & Time:</strong> <span id="confirm-pickupdate"></span> at <span
                         id="confirm-pickuptime"></span></div>
 
                 <hr>
-                <h6 class="fw-bold text-danger">Destination Details</h6>
+                <h3 class="h6 fw-bold text-danger">Destination Details</h3>
                 <div class="mb-3"><strong>Destination Address:</strong> <span id="confirm-destinationaddress"></span>
                 </div>
                 <div class="mb-3"><strong>Destination Postcode:</strong> <span id="confirm-destination-postcode"></span>
